@@ -1,0 +1,97 @@
+*{
+  background-color: #343a40;
+}
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 24sp;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+h3{
+  font-size: 12sp;
+  color: rgba(255, 255, 255, 0.493);
+}
+
+p{
+  font-size: 12sp;
+  color: rgba(255, 255, 255, 0.493);  
+}
+
+img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.intro{
+  height: 500px;
+  max-height: 500px;
+}
+
+.intro-img{
+  position: absolute;
+  right: 27%;
+}
+
+.about-me{
+  max-height:500px;
+}
+
+.about-me-text{
+
+}
+
+.about-me-image{
+  margin-inline-start: 10%;
+}
+
+@media (max-width :993px){
+  .intro{
+    height: 800px;
+    max-height: 800px;
+  }
+  .intro-text{
+    text-align: center;
+  }
+  .intro-img{
+    position: absolute;
+  }
+  .about-me{
+    max-height:800px;
+  }
+  
+  .about-me-text{
+    margin-top: 4%;
+    text-align: center;
+  }
+  
+  .about-me-image{
+    margin-inline-start: 27%;
+  }
+}
+
+@media (max-width:768px){
+  .intro-img{
+    position: absolute;
+    margin-inline-end: -5%;
+  }
+  .about-me-image{
+    margin-inline-start: 15%;
+  }
+}
+
+.bar {height: 18px; 
+  background-color: white;
+  margin-top: 5%;  
+}
+
+.skill-img{
+  max-width: 200px;
+  max-height: 200px;
+}
