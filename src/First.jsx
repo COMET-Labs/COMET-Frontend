@@ -9,7 +9,8 @@ const First = (props) => {
                 <div className="row">
                     <div className="col-10 mx-auto">
                       <div className="row">
-                        <div className="col-md-6 pt-5 pt-lg-0 order-2 order-lg-1 justify-content-center flex-column">
+                        <div className="col-md-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex justify-content-center flex-column">
+                            
                             <h1>
                                 <strong className="brand-name">IIITians Network</strong> {props.heading} 
                             </h1>
@@ -23,8 +24,8 @@ const First = (props) => {
                                 <br></br><br></br>
                             </div>
                         </div>
-                        <div className="col-lg-6 order-1 order-lg-2 header-img justify-content-center flex-column">
-                            <img src={props.imgsrc} className="img-fluid animated" alt="IIITian"/>
+                        <div className="col-lg-6 order-1 order-lg-2 header-img">
+                            <img src={props.imgsrc} className="img-fluid animated image" alt="IIITian"/>
                         </div>
                     </div>
                    </div>
