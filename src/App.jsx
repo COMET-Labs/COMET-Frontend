@@ -1,12 +1,11 @@
 import React from "react";
 import web from "../src/images/img1.svg";
 import web2 from "../src/images/img2.svg";
-import web3 from "../src/images/img3.svg";
+import web3 from "../src/images/imgs2.svg";
 import web4 from "../src/images/img4.svg";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import First from "./First";
 import Second from "./Second";
-
 
 const App = () => {
     return(
