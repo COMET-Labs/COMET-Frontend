@@ -6,14 +6,18 @@ import WorkExperience from '../components/work-experience';
 import Projects from '../components/projects';
 import Layout from '../components/layouts/default';
 
+import PortFolioData from '../PortFolioData';
+
+
 export default function Home() {
   return (
     <Layout>
-      <MainIntro />
+
+      <MainIntro params={PortFolioData["intro"]}/>
       <AboutMe />
-      <Education />
+      <Education params={PortFolioData["education"]}/>
       <Skills />
-      <WorkExperience />
+      <WorkExperience params={PortFolioData["work-experience"]}/>
       <Projects />
     </Layout>
   );
