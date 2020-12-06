@@ -45,4 +45,16 @@
 .subtitle {
   color: rgb(97, 93, 93);
   font-size: small;
+  text-align: center;
+}
+
+.icon_row {
+  margin-top: 15px;
+}
+
+@media (min-width: 480px) {
+  .icon_row {
+    margin-top: 15px;
+    margin-left: -20px;
+  }
 }
