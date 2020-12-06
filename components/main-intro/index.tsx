@@ -1,3 +1,4 @@
+
 import  styles from './main-intro.module.scss';
 
 function MainIntro(props) {
@@ -19,6 +20,7 @@ function MainIntro(props) {
         </div>
       </div>
       
+
     </div>
   );
 }

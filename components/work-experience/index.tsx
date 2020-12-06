@@ -18,6 +18,7 @@ function WorkExperience(props) {
           </div>
         )
       })}
+
     </div>
   );
 }

@@ -9,6 +9,7 @@ interface Props {
 
 const Layout = ({ children }) => (
   <div>
+
     <Head>
       <title>Portfolio</title>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossOrigin="anonymous"></link>
@@ -18,6 +19,7 @@ const Layout = ({ children }) => (
     {children}
     <Footer />
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'></link>
+
   </div>
 );
 

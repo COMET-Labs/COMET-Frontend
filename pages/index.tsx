@@ -5,11 +5,14 @@ import Skills from '../components/skills';
 import WorkExperience from '../components/work-experience';
 import Projects from '../components/projects';
 import Layout from '../components/layouts/default';
+
 import PortFolioData from '../PortFolioData';
+
 
 export default function Home() {
   return (
     <Layout>
+
       <MainIntro params={PortFolioData["intro"]}/>
       <AboutMe />
       <Education params={PortFolioData["education"]}/>
