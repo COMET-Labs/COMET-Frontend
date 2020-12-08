@@ -1,0 +1,36 @@
+.skills_header {
+  color: #727bf2;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.skill {
+  margin-top: 5%;
+}
+
+.skill_image {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.skill_name {
+  margin-left: 5%;
+  color: gray;
+  font-size: 1.5rem;
+}
+
+.bar_container {
+  margin-top: 8%;
+  width: 100%;
+  background-color: #eee7e7;
+  border-radius: 50px;
+  text-align: center;
+  color: white;
+}
+
+.bar {
+  border-radius: 50px;
+  height: 12px;
+  background-color: #767bfe;
+}
