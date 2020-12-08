@@ -7,16 +7,17 @@ import Projects from '../components/projects';
 import Layout from '../components/layouts/default';
 
 import PortFolioData from '../PortFolioData';
+import NavBar from '../components/navbar';
 
 
 export default function Home() {
   return (
     <Layout>
-
+      
       <MainIntro params={PortFolioData["intro"]}/>
       <AboutMe />
       <Education params={PortFolioData["education"]}/>
-      <Skills />
+      <Skills params={PortFolioData["skills"]}/>
       <WorkExperience params={PortFolioData["work-experience"]}/>
       <Projects />
     </Layout>
