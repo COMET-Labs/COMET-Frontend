@@ -1,6 +1,7 @@
 import styles from './social.module.scss';
 import { Button } from 'react-bootstrap';
 
+
 function ProfileVerifyBox(props) {
   function handleChange(value) {
     props.onChange(value);
