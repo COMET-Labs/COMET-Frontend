@@ -19,7 +19,7 @@ export default function Home() {
       <Education params={PortFolioData["education"]}/>
       <Skills params={PortFolioData["skills"]}/>
       <WorkExperience params={PortFolioData["work-experience"]}/>
-      <Projects params={PortFolioData["projects"]}/>
+      <Projects />
     </Layout>
   );
 }
