@@ -1,0 +1,55 @@
+.arrow {
+  font-size: x-large;
+}
+.button {
+  height: 48px;
+  width: 100%;
+  background: #29ab87;
+  border-color: #29ab87;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+}
+
+.inputbox {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+}
+.inputbox:hover {
+  border: 1.5px solid #29ab87;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+}
+
+.fontsmall {
+  font-size: small;
+  color: #858585;
+}
+.fontgreen {
+  color: #29ab87;
+}
+.purple {
+  color: #767bfe;
+  font-weight: 400;
+}
+.rightBox {
+  width: 80%;
+  height: auto;
+  background-color: white;
+  margin: 10%;
+  box-shadow: -5px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+}
+@media (max-width: 1199px) and(min-width:768px) {
+  .rightBox {
+    width: 90%;
+    margin: 5% 0% 5% 10%;
+  }
+}
+@media (max-width: 440px) {
+  .rightBox {
+    width: 90%;
+    margin: 5%;
+  }
+}
