@@ -15,7 +15,7 @@ function LoginBox(props) {
           <img src="./img/linkedin.svg" alt="Linkedin" className={styles.linkedin_logo}/> Login with LinkedIn
         </Button>
         <div className="text-center"> <hr className={styles.hr}></hr> or <hr className={styles.hr}></hr></div>
-        <Form action="/">
+        <Form action="/portfolio">
           <Form.Group controlId="formBasicEmail" className="mt-4">
             <Form.Label>Email </Form.Label>
             <Form.Control type="email" placeholder="example@mail.com" className={styles.inputbox} />
