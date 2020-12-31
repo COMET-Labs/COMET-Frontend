@@ -12,7 +12,7 @@
   font-size: 16px;
   line-height: 24px;
   align-self: center;
-  color: #707070 !important;
+  color: #ebebeb !important;
   padding-left: 30px !important;
   padding-right: 30px !important;
 }
@@ -36,12 +36,13 @@
   font-size: 16px;
   line-height: 24px;
   /* identical to box height */
-  color: #17171a;
+  color: #ebebeb;
 }
 
 .name {
   flex-wrap: nowrap !important;
 }
+
 .institute {
   /* IIITDM Jabalpur */
   width: 92px;
@@ -52,7 +53,7 @@
   font-size: 12px;
   line-height: 18px;
   /* identical to box height */
-  color: #707070;
+  color: #e4e4e4;
   float: right;
 }
 .profile {
@@ -80,12 +81,4 @@
   .second {
     order: 1;
   }
-}
-
-.icon {
-  width: 25px;
-  height: 25px;
-  margin-left: 50px;
-  margin-top: 10px;
-  cursor: pointer;
 }

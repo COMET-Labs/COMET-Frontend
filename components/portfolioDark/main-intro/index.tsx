@@ -1,7 +1,6 @@
-
 import  styles from './main-intro.module.scss';
 
-function MainIntro(props) {
+function MainIntroDark(props) {
   return (
     <div className="container">
       <div className={"row "+styles.all_content}> 
@@ -12,17 +11,16 @@ function MainIntro(props) {
           <p className={styles.intro_text}>{props.params.intro}</p>
           <a className={styles.button} href={props.params.cvlink}>Download CV</a>
           <div className={styles.all_icons}>
-            <a href={props.params.insta}><span className={"iconify "+styles.icon} color="black" data-icon="ant-design:instagram-outlined" data-inline="false"></span></a>
-            <a href={props.params.twitter}><span className={"iconify "+styles.icon} color="black" data-icon="ant-design:twitter-outlined" data-inline="false"></span></a>
-            <a href={props.params.fb}><span className={"iconify "+styles.icon} color="black" data-icon="bx:bxl-facebook" data-inline="false"></span></a>
-            <a href={props.params.behance}><span className={"iconify "+styles.icon} color="black" data-icon="ant-design:behance-outlined" data-inline="false"></span></a>
+            <a href={props.params.insta}><span className={"iconify "+styles.icon} color="white" data-icon="ant-design:instagram-outlined" data-inline="false"></span></a>
+            <a href={props.params.twitter}><span className={"iconify "+styles.icon} color="white" data-icon="ant-design:twitter-outlined" data-inline="false"></span></a>
+            <a href={props.params.fb}><span className={"iconify "+styles.icon} color="white" data-icon="bx:bxl-facebook" data-inline="false"></span></a>
+            <a href={props.params.behance}><span className={"iconify "+styles.icon} color="white" data-icon="ant-design:behance-outlined" data-inline="false"></span></a>
           </div>
         </div>
       </div>
       
-
     </div>
   );
 }
 
-export default MainIntro;
+export default MainIntroDark;

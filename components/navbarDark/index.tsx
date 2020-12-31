@@ -1,9 +1,9 @@
 import  styles from './navbar.module.scss'
 import  {Navbar,Nav} from 'react-bootstrap';
 
-function NavBar() {
+function NavBarDark() {
   return (
-    <Navbar className="navbar" expand="lg" >
+    <Navbar className="navbar" expand="lg">
             <div className={`row order-lg-last order-sm-first ${styles.profile}`}>
               <div className={`col ${styles.first}`}>
                 <div className={`row ${styles.name}`}>
@@ -12,6 +12,7 @@ function NavBar() {
                 </div>
                 <div className="row">
                 <span className={styles.institute}>IIITDM Jabalpur</span>
+                
                 </div>
                 </div>
                 <div className={`col ${styles.second}`}>
@@ -35,4 +36,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default NavBarDark;

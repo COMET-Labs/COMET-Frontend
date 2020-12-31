@@ -1,3 +1,4 @@
+import { ThemeProvider } from 'react-bootstrap';
 import styles from './brand-intro.module.scss';
 
 function BrandIntro(){

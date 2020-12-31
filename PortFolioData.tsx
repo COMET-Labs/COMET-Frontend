@@ -21,6 +21,8 @@ const PortFolioData = {
       "start": "July 2017",
       "end": "Present",
       "name": "PDPM Indian Institute of Information Technology, Design and Manufacturing, Jabalpur",
+      "shortname":"PDPM IIITDM Jabalpur",
+      "abbrevation":"PDPM IIITDMJ",
       "matter": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci consectetur, architecto quas fugiat, iste inventore facere repellendus delectus id, vitae blanditiis",
     },
     {
@@ -28,6 +30,8 @@ const PortFolioData = {
       "start": "April 2007",
       "end": "March 2017",
       "name": "Kendriya Vidyalaya, Basti",
+      "shortname":"Kendriya Vidyalaya, Basti",
+      "abbrevation":"Kendriya Vidyalaya, Basti",
       "matter": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci consectetur, architecto quas fugiat, iste inventore facere repellendus delectus id, vitae blanditiis",
     }
   ],
@@ -68,14 +72,14 @@ const PortFolioData = {
     {
       "image":"https://www.mime.asia/wp-content/uploads/2019/08/1.-Google-Office-Tour-Inspiration-and-Ideas-for-Your-Startup.jpg",
       "start":"April 2020",
-      "end":"September 2020",
+      "end":"Present",
       "name":"Google India",
       "matter":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci consectetur, architecto quas fugiat, iste inventore facere repellendus delectus id, vitae blanditiis"
     },
     {
       "image":"https://economictimes.indiatimes.com/thumb/msid-78621556,width-1200,height-900/tech/internet/facebook-india-appoints-sunil-abraham-as-public-policy-director-for-data-and-emerging-tech.jpg",
-      "start":"April 2020",
-      "end":"September 2020",
+      "start":"March 2019",
+      "end":"April 2020",
       "name":"Facebook",
       "matter":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci consectetur, architecto quas fugiat, iste inventore facere repellendus delectus id, vitae blanditiis"
     }

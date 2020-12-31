@@ -8,7 +8,8 @@
   margin: auto;
   margin-top: 3%;
   padding: 2%;
-  background-color: #e9e9e9;
+  background-color: #4d4d4d;
+  color: #ebebeb;
   border-radius: 15px;
 }
 
@@ -18,9 +19,14 @@
   justify-content: space-evenly;
 }
 
+.icon {
+  background-color: #4d4d4d;
+}
+
 .contact {
   display: inline;
-  background-color: #e9e9e9;
+  background-color: #4d4d4d;
+  color: #ebebeb;
   border-radius: 20px;
   font-size: 1.5rem;
   margin-left: 2%;
