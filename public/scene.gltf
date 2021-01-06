@@ -1,0 +1,350 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 26837,
+      "max": [
+        95.438400268554688,
+        26.639799118041992,
+        210.08349609375
+      ],
+      "min": [
+        -95.438400268554688,
+        -37.259700775146484,
+        -0.64029997587203979
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 322044,
+      "componentType": 5126,
+      "count": 26837,
+      "max": [
+        0.99999868869781494,
+        0.99996495246887207,
+        0.99979597330093384
+      ],
+      "min": [
+        -1,
+        -0.99999785423278809,
+        -0.99987161159515381
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 26837,
+      "max": [
+        1,
+        0.99999898672103882,
+        0.9999271035194397,
+        1
+      ],
+      "min": [
+        -1,
+        -0.99995356798171997,
+        -0.99971014261245728,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 26837,
+      "max": [
+        0.99709999561309814,
+        0.99559998512268066
+      ],
+      "min": [
+        -0.74709999561309814,
+        0.0015999999595806003
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 124050,
+      "max": [
+        26836
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 644088,
+      "componentType": 5126,
+      "count": 4103,
+      "max": [
+        82.520797729492188,
+        26.589700698852539,
+        203.19529724121094
+      ],
+      "min": [
+        -82.520797729492188,
+        -36.141998291015625,
+        92.370201110839844
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 693324,
+      "componentType": 5126,
+      "count": 4103,
+      "max": [
+        0.99999988079071045,
+        0.99973064661026001,
+        0.99987685680389404
+      ],
+      "min": [
+        -0.99999988079071045,
+        -0.99993503093719482,
+        -0.99980992078781128
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 429392,
+      "componentType": 5126,
+      "count": 4103,
+      "max": [
+        1,
+        0.999980628490448,
+        0.99917036294937134,
+        1
+      ],
+      "min": [
+        -0.99997532367706299,
+        -0.999980628490448,
+        -0.99442708492279053,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 214696,
+      "componentType": 5126,
+      "count": 4103,
+      "max": [
+        1,
+        1.0585999488830566
+      ],
+      "min": [
+        -0.72269999980926514,
+        0.0062000001780688763
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 496200,
+      "componentType": 5125,
+      "count": 10023,
+      "max": [
+        4102
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "o0ozexo0o (https://sketchfab.com/dadndan0091)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/engineer-character-sci-fi-fe39548e9eba43858280ef917cc816e3",
+      "title": "Engineer character sci-fi"
+    },
+    "generator": "Sketchfab-5.98.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 536292,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 247520,
+      "byteOffset": 536292,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 742560,
+      "byteOffset": 783812,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 495040,
+      "byteOffset": 1526372,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 2021412,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/material_0_baseColor.png"
+    },
+    {
+      "uri": "textures/material_0_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/material_0_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "material_0",
+      "normalTexture": {
+        "index": 2,
+        "scale": 1,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "metallicFactor": 1,
+        "metallicRoughnessTexture": {
+          "index": 1,
+          "texCoord": 0
+        },
+        "roughnessFactor": 0.59999999999999998
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3,
+        4
+      ],
+      "name": "HGH_EngineerTrooper.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": ""
+    },
+    {
+      "mesh": 1,
+      "name": ""
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
+
