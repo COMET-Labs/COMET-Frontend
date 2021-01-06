@@ -3,4 +3,27 @@
 .features {
   font-family: 'Fira Sans', sans-serif;
   font-size: 3.5rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  font-size: 10rem;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  color: #fff;
+  span {
+    display: block;
+  }
+  @media (max-width: 1440px) {
+    font-size: 6rem;
+  }
+  @media (max-width: 786px) {
+    font-size: 3rem;
+  }
 }
