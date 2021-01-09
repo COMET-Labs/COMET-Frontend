@@ -1,24 +1,30 @@
-import MainIntro from '../components/main-intro';
-import AboutMe from '../components/aboutme';
-import Education from '../components/education';
-import Skills from '../components/skills';
-import WorkExperience from '../components/work-experience';
-import Projects from '../components/projects';
-import Layout from '../components/layouts/default';
-
-import PortFolioData from '../PortFolioData';
-
+import React, { useRef, useEffect, useState, Suspense } from 'react';
+import BrandIntro from '../components/landing-page/brand-intro';
+import Features from '../components/landing-page/features';
+import { Canvas } from 'react-three-fiber';
+import { Stars } from 'drei';
+import state from '../components/landing-page/state';
 
 export default function Home() {
+  const domContent = useRef();
+  const scrollArea = useRef();
+  const onScroll = (e) => (state.top.current = e.target.scrollTop);
+  useEffect(() => void onScroll({ target: scrollArea.current }), []);
   return (
-    <Layout>
-
-      <MainIntro params={PortFolioData["intro"]}/>
-      <AboutMe />
-      <Education params={PortFolioData["education"]}/>
-      <Skills />
-      <WorkExperience params={PortFolioData["work-experience"]}/>
-      <Projects />
-    </Layout>
+    <>
+      <Canvas colorManagement camera={{ position: [0, 0, 120], fov: 70 }}>
+        <Suspense fallback={null}>
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+          <Stars />
+          <BrandIntro domContent={domContent} />
+          <Features domContent={domContent} />
+        </Suspense>
+      </Canvas>
+      <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
+        <div style={{ position: 'sticky', top: 0 }} ref={domContent} />
+        <div style={{ height: `${state.sections * 100}vh` }} />
+      </div>
+    </>
   );
 }

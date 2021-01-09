@@ -21,6 +21,8 @@ const PortFolioData = {
       "start": "July 2017",
       "end": "Present",
       "name": "PDPM Indian Institute of Information Technology, Design and Manufacturing, Jabalpur",
+      "shortname":"PDPM IIITDM Jabalpur",
+      "abbrevation":"PDPM IIITDMJ",
       "matter": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci consectetur, architecto quas fugiat, iste inventore facere repellendus delectus id, vitae blanditiis",
     },
     {
@@ -28,6 +30,8 @@ const PortFolioData = {
       "start": "April 2007",
       "end": "March 2017",
       "name": "Kendriya Vidyalaya, Basti",
+      "shortname":"Kendriya Vidyalaya, Basti",
+      "abbrevation":"Kendriya Vidyalaya, Basti",
       "matter": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci consectetur, architecto quas fugiat, iste inventore facere repellendus delectus id, vitae blanditiis",
     }
   ],
@@ -68,16 +72,36 @@ const PortFolioData = {
     {
       "image":"https://www.mime.asia/wp-content/uploads/2019/08/1.-Google-Office-Tour-Inspiration-and-Ideas-for-Your-Startup.jpg",
       "start":"April 2020",
-      "end":"September 2020",
+      "end":"Present",
       "name":"Google India",
       "matter":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci consectetur, architecto quas fugiat, iste inventore facere repellendus delectus id, vitae blanditiis"
     },
     {
       "image":"https://economictimes.indiatimes.com/thumb/msid-78621556,width-1200,height-900/tech/internet/facebook-india-appoints-sunil-abraham-as-public-policy-director-for-data-and-emerging-tech.jpg",
-      "start":"April 2020",
-      "end":"September 2020",
+      "start":"March 2019",
+      "end":"April 2020",
       "name":"Facebook",
       "matter":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci consectetur, architecto quas fugiat, iste inventore facere repellendus delectus id, vitae blanditiis"
+    }
+  ],
+  "projects":[
+    {
+      "image":"https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/99425955_126275889074281_8516763927122542592_o.jpg?_nc_cat=109&ccb=2&_nc_sid=6e5ad9&_nc_ohc=eoiscLPeeigAX-1_Ru7&_nc_ht=scontent-frt3-1.xx&oh=25845ba96fe2e6268c9c8415ed51d487&oe=5FF227A1",
+      "name":"IIITIANS Network",
+      "start":"January 2020",
+      "end":"Present",
+      "matter":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci consectetur, architecto quas fugiat, iste inventore facere repellendus delectus id, vitae blanditiis",
+      "link":"https://iiitiansnetwork.com/",
+      "github":"https://github.com/IIITians-Network"
+    },
+    {
+      "image":"https://cdn.dribbble.com/users/1769954/screenshots/9552605/media/4fc4068e3ae9c17c20b2da6de931c1b6.png?compress=1&resize=400x300",
+      "name":"Project COMET",
+      "start":"April 2020",
+      "end":"Present",
+      "matter":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci consectetur, architecto quas fugiat, iste inventore facere repellendus delectus id, vitae blanditiis",
+      "link":"https://projectcomet.in/",
+      "github":"https://github.com/orgs/Project-COMET-IIITiansNetwork/dashboard"
     }
   ]
 }
