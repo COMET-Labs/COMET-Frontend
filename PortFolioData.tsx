@@ -86,7 +86,7 @@ const PortFolioData = {
   ],
   "projects":[
     {
-      "image":"https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/99425955_126275889074281_8516763927122542592_o.jpg?_nc_cat=109&ccb=2&_nc_sid=6e5ad9&_nc_ohc=eoiscLPeeigAX-1_Ru7&_nc_ht=scontent-frt3-1.xx&oh=25845ba96fe2e6268c9c8415ed51d487&oe=5FF227A1",
+      "image":"https://scontent-bom1-2.xx.fbcdn.net/v/t1.0-9/99425955_126275889074281_8516763927122542592_o.jpg?_nc_cat=109&ccb=2&_nc_sid=09cbfe&_nc_ohc=90kDg_gc28QAX-yM72o&_nc_ht=scontent-bom1-2.xx&oh=85520bc9c7c6cd0a5ff3b79d48f28e4d&oe=60259221",
       "name":"IIITIANS Network",
       "start":"January 2020",
       "end":"Present",
