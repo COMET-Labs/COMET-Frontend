@@ -6,17 +6,23 @@
   margin: 0 auto;
   width: 100%;
   max-width: 100%;
-  height: 100%;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
 }
+
+.feature{
+  color:white;
+  margin-left: 10%;
+}
+
 .title {
-  font-size: 10rem;
+  font-size: 7rem;
   text-align: center;
   width: 100%;
   margin: 0 auto;
   color: #fff;
+  margin-top: 6%;
   span {
     display: block;
   }

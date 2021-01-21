@@ -9,8 +9,15 @@ function Features({ domContent }) {
         <Html fullscreen portal={domContent}>
           <div className={styles.features}>
             <h1 className={styles.title}>
-              <span>This is the features component.</span>
+              <span>FEATURES OF COMET</span>
             </h1>
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-3 col-md-6 col-sm-12">
+                  {/* <p>A social media platform for all IIITIANS</p> */}
+                </div>
+              </div>
+            </div>
           </div>
         </Html>
       </group>
