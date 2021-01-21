@@ -66,9 +66,9 @@ const CardData = [
             }
         ],
         "languages":[
-            "c++",
-            "javascript",
-            "python"
+            "C++",
+            "JavaScript",
+            "Python"
         ],
         "tags":[
             "web-develpment",
@@ -77,7 +77,10 @@ const CardData = [
             "startup",
             "google-oauth",
             "jwt",
-            "threejs"
+            "threejs",
+            "DynamoDB",
+            "material-ui",
+            "nodemailer"
         ]
     },
     {
@@ -147,9 +150,9 @@ const CardData = [
             }
         ],
         "languages":[
-            "c++",
-            "javascript",
-            "python"
+            "C++",
+            "JavaScript",
+            "Python"
         ],
         "tags":[
             "web-develpment",
@@ -158,7 +161,10 @@ const CardData = [
             "startup",
             "google-oauth",
             "jwt",
-            "threejs"
+            "threejs",
+            "DynamoDB",
+            "material-ui",
+            "nodemailer"
         ]
     },
     {
@@ -228,9 +234,9 @@ const CardData = [
             }
         ],
         "languages":[
-            "c++",
-            "javascript",
-            "python"
+            "C++",
+            "JavaScript",
+            "Python"
         ],
         "tags":[
             "web-develpment",
@@ -239,7 +245,10 @@ const CardData = [
             "startup",
             "google-oauth",
             "jwt",
-            "threejs"
+            "threejs",
+            "DynamoDB",
+            "material-ui",
+            "nodemailer"
         ]
     },
     {
@@ -309,9 +318,9 @@ const CardData = [
             }
         ],
         "languages":[
-            "c++",
-            "javascript",
-            "python"
+            "C++",
+            "JavaScript",
+            "Python"
         ],
         "tags":[
             "web-develpment",
@@ -320,7 +329,10 @@ const CardData = [
             "startup",
             "google-oauth",
             "jwt",
-            "threejs"
+            "threejs",
+            "DynamoDB",
+            "material-ui",
+            "nodemailer"
         ]
     },
     {
@@ -390,9 +402,9 @@ const CardData = [
             }
         ],
         "languages":[
-            "c++",
-            "javascript",
-            "python"
+            "C++",
+            "JavaScript",
+            "Python"
         ],
         "tags":[
             "web-develpment",
@@ -401,7 +413,10 @@ const CardData = [
             "startup",
             "google-oauth",
             "jwt",
-            "threejs"
+            "threejs",
+            "DynamoDB",
+            "material-ui",
+            "nodemailer"
         ]
     },
     {
@@ -471,9 +486,9 @@ const CardData = [
             }
         ],
         "languages":[
-            "c++",
-            "javascript",
-            "python"
+            "C++",
+            "JavaScript",
+            "Python"
         ],
         "tags":[
             "web-develpment",
@@ -482,7 +497,10 @@ const CardData = [
             "startup",
             "google-oauth",
             "jwt",
-            "threejs"
+            "threejs",
+            "DynamoDB",
+            "material-ui",
+            "nodemailer"
         ]
     },
 ]
