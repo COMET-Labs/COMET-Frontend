@@ -15,7 +15,7 @@ export default function Login() {
   }
 
   return (
-    <Layout>
+    <Layout darkTheme={false}>
       <div className={styles.login_page}>
         <div className="container">
           <div className={'row'}>
