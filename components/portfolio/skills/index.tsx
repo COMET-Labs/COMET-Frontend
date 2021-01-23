@@ -6,9 +6,9 @@ function Skills(props) {
       <h1 className={styles.skills_header}>SKILLS</h1>
       <div className="container">
         <div className="row">
-          {props.params.map((skill) => {
+          {props.params.map((skill,index) => {
             return (
-              <div className={'col-lg-4 col-md-6 col-sm-12 ' + styles.skill}>
+              <div key={index} className={'col-lg-4 col-md-6 col-sm-12 ' + styles.skill}>
                 <img src={skill.image} className={styles.skill_image}></img>
                 <span className={styles.skill_name}>{skill.name}</span>
                 <div className={styles.bar_container}>

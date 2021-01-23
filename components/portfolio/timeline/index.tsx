@@ -28,9 +28,9 @@ function TimeLine(props){
     <div>
     <h1 className={styles.timeline_header}>TIMELINE</h1>
     <Timeline align="alternate">
-        {props.work.map((company)=>{
+        {props.work.map((company,index)=>{
             return(
-                <TimelineItem>
+                <TimelineItem key={index}>
                     <TimelineOppositeContent>
                     <Typography variant="body2" color="textSecondary">
                         {company.start}

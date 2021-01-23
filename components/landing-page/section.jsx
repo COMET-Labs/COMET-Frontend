@@ -11,7 +11,7 @@ function Section({ children, offset, factor, ...props }) {
   offset = offset !== undefined ? offset : parentOffset;
   useFrame(() => {
     const curY = ref.current.position.y;
-    const curTop = state.top.current / aspect;
+    const curTop = state.top / aspect;
     ref.current.position.y = lerp(curY, (curTop / state.zoom) * factor, 0.1);
   });
   return (
