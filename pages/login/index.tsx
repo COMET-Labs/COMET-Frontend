@@ -24,7 +24,9 @@ export default function Login() {
               {form == 0 && <LoginBox form={form} onChange={handleChange}></LoginBox>}
               {form == 1 && <RegisterBox form={form} onChange={handleChange}></RegisterBox>}
               {form == 2 && <Otp1 form={form} onChange={handleChange}></Otp1>}
-              {form == 3 && (<ProfileverifyBox form={form} onChange={handleChange}></ProfileverifyBox>)}
+              {form == 3 && (
+                <ProfileverifyBox form={form} onChange={handleChange}></ProfileverifyBox>
+              )}
               {form == 4 && <Otp2 form={form} onChange={handleChange}></Otp2>}
               {form == 5 && <Social form={form} onChange={handleChange}></Social>}
             </div>
