@@ -8,47 +8,10 @@ import {InputGroup, FormControl} from 'react-bootstrap';
 import  styles from './os.module.scss';
 import {SwipeableDrawer} from '@material-ui/core';
 import { useMediaQuery } from 'react-responsive';
+import SearchIcon from '@material-ui/icons/Search';
 
-function Drawer(){
-    const [open,setOpen] = useState(false);
-  return (
-    <SwipeableDrawer open={open}
-    onClose={()=>setOpen(false)}
-    onOpen={()=>setOpen(true)}
-    PaperProps={{style: {minWidth:"50vw"}}}
-    >
-      <div className="container">
-            <div className={styles.search}>
-                    <InputGroup>
-                        <FormControl className={styles.bar}/>
-                        <InputGroup.Append>
-                            <InputGroup.Text className={styles.bar}><i className={`${styles.fa} fa fa-search`}></i></InputGroup.Text>
-                        </InputGroup.Append>
-                    </InputGroup>
-            </div>
-            <div className={styles.title}>Search Results</div>
-                    <p className={styles.text}>Graphic Designing</p>
-                    <p className={styles.text}>Design</p>
-                    <p className={styles.text}>Graphics</p>
-                    <p className={styles.text}>Another Search Result</p>
-                    <a className={styles.link} href="#">Load More..</a>
-            <div className={styles.title}>Popular Topics</div>
-                    <p className={styles.text}>Name of the topic</p>
-                    <p className={styles.text}>Name of another topic</p>
-                    <p className={styles.text}>Topic name</p>
-                    <p className={styles.text}>One more topic name</p>
-            <div className={styles.title}>Recent Searches</div>
-                    <p className={styles.text}>Name of the topic</p>
-                    <p className={styles.text}>Name of another topic</p>
-                    <p className={styles.text}>Topic name</p>
-
-        </div>
-    </SwipeableDrawer>
-    
-  );
-}
 export default function OS(){
-
+    const [open,setOpen] = useState(false);
     const isMobile = useMediaQuery({
         query: '(max-width: 768px)'
       })
@@ -90,7 +53,40 @@ export default function OS(){
 
                         </div>
                     </div>
-                    :<Drawer/>
+                    :<div>
+                        <SwipeableDrawer open={open}
+                            onClose={()=>setOpen(false)}
+                            onOpen={()=>setOpen(true)}
+                            PaperProps={{style: {minWidth:"50vw"}}}
+                            >
+                            <div className="container">
+                                    <div className={styles.search}>
+                                            <InputGroup>
+                                                <FormControl className={styles.bar}/>
+                                                <InputGroup.Append>
+                                                    <InputGroup.Text className={styles.bar}><i className={`${styles.fa} fa fa-search`}></i></InputGroup.Text>
+                                                </InputGroup.Append>
+                                            </InputGroup>
+                                    </div>
+                                    <div className={styles.title}>Search Results</div>
+                                            <p className={styles.text}>Graphic Designing</p>
+                                            <p className={styles.text}>Design</p>
+                                            <p className={styles.text}>Graphics</p>
+                                            <p className={styles.text}>Another Search Result</p>
+                                            <a className={styles.link} href="#">Load More..</a>
+                                    <div className={styles.title}>Popular Topics</div>
+                                            <p className={styles.text}>Name of the topic</p>
+                                            <p className={styles.text}>Name of another topic</p>
+                                            <p className={styles.text}>Topic name</p>
+                                            <p className={styles.text}>One more topic name</p>
+                                    <div className={styles.title}>Recent Searches</div>
+                                            <p className={styles.text}>Name of the topic</p>
+                                            <p className={styles.text}>Name of another topic</p>
+                                            <p className={styles.text}>Topic name</p>
+
+                                </div>
+                            </SwipeableDrawer>
+                    </div>
                     }
                         
                     </div>
@@ -107,6 +103,27 @@ export default function OS(){
                                 })}
                         </div>
                         </div>
+                        {isMobile?
+                        <div>
+                            <button 
+                            style={{position:"fixed",
+                            bottom:"15px",
+                            color:"white",
+                            backgroundColor:"#727bf2",
+                            opacity:"0.8",
+                            border:"none",
+                            borderRadius:"50%",
+                            height:"50px",
+                            width:"50px",
+                            outline:"none"}}
+                            onClick={()=>{setOpen(true)}}
+                            >
+                                <SearchIcon></SearchIcon>
+                            </button>
+                        </div>
+                        :
+                        <div>
+                        </div>}
                     </div>
                 </div>
             </div>
