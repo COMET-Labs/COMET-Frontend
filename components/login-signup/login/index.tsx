@@ -70,7 +70,14 @@ function LoginBox(props) {
       }
      
     })
-  };  
+  };
+  
+  const loginwithlinkedin = () => {
+    auth0Client.authorize({
+      connection: 'linkedin',
+      response_type:'token'
+    });
+  }
   
   if (props.form == 0) {
     return (
@@ -78,7 +85,7 @@ function LoginBox(props) {
         <Button className={styles.google_logo + ' mb-2'} variant="light" block>
           <img src="./img/google.svg" alt="Google" /> Login with Google
         </Button>
-        <Button className={styles.google_logo + ' mb-2'} variant="light" block>
+        <Button className={styles.google_logo + ' mb-2'} variant="light" onClick={loginwithlinkedin} block>
           <img src="./img/linkedin.svg" alt="Linkedin" className={styles.linkedin_logo}/> Login with LinkedIn
         </Button>
         <div className="text-center"> <hr className={styles.hr}></hr> or <hr className={styles.hr}></hr></div>
