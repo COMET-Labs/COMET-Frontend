@@ -13,14 +13,60 @@ import SearchIcon from '@material-ui/icons/Search';
 export default function OS(){
     const [open,setOpen] = useState(false);
     const isMobile = useMediaQuery({
-        query: '(max-width: 768px)'
+        query: '(max-width: 767px)'
       })
+    
+    const isExtraSmall = useMediaQuery({
+    query: '(max-width: 576px)'
+    })
 
     return(
         <Layout darkTheme={false}>
             <div style={{backgroundColor:" rgb(250, 250, 250)"}}>
             <div className="container" style={{maxWidth:"1600px"}}>
                 <div className="row">
+                    <div className={"col-lg-6 col-md-6 col-sm-12 "+styles.top_heading}>
+                        {
+                            !isMobile?
+                            <h1 style={{
+                                color:"#727bf2",
+                                marginTop:"20px",
+                                paddingLeft:"30px"
+                            }}>Trending OS Projects</h1>
+                            :
+                            <h1 style={{
+                                color:"#727bf2",
+                                marginTop:"20px",
+                                textAlign:"center"
+                            }}>Trending OS Projects</h1>
+                        }
+                        
+                    </div>
+                    <div className="col-lg-6 col-md-6 col-sm-12" 
+                    style={{display:"flex",
+                    marginTop:"30px"}}>
+                        <div className="container">
+                            <div className="row">
+                            <div className="col-lg-6 col-md-6 col-sm-6">
+                            <InputGroup>
+                                <FormControl className={styles.bar}/>
+                                <InputGroup.Append>
+                                <InputGroup.Text className={styles.bar}><i className={`${styles.fa} fa fa-search`}></i></InputGroup.Text>
+                                </InputGroup.Append>
+                            </InputGroup>
+                            </div>
+                            <div className="col-lg-6 col-md-6 col-sm-6">
+                                {!isExtraSmall
+                                ?
+                                <button className={styles.create_project}>Create Project</button>
+                                :
+                                <button className={styles.create_project_mobile}>Create Project</button>
+                            }
+                            
+                            </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className="col-lg-3 col-md-3 col-sm-12">
                         {/* Keep the code for search section here */}
                         {/* This is the search section */}
