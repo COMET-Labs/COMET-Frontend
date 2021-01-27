@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@450&display=swap');
+
+.top_heading{
+  font-family: 'Oswald', sans-serif;
+}
 
 .card{
 position: absolute;
@@ -57,4 +62,32 @@ font-style: normal;
 font-weight: normal;
 font-size: 11px;
 line-height: 16px;
+}
+
+.create_project{
+  border-radius: 20px;
+  background-color:#20c95c;
+  margin-left: 20px;
+  color: white;
+  border: none;
+  height: 40.45px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  width: 90%;
+}
+
+.create_project_mobile{
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 100%;
+  background-color:#20c95c;
+  color: white;
+  border: none;
+  height: 40.45px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 0.8rem;
+  font-weight: 800;
 }
