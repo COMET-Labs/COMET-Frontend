@@ -1,3 +1,5 @@
+
+
 .all_content{
     background-color: rgb(247, 246, 246);
     text-align: center;
@@ -172,3 +174,41 @@
     border-radius: 50%;
     margin: 10px;
 }
+
+.intro{
+height: 147px;
+border-radius: 16px 16px 0px 0px;
+}
+
+.project_name{
+    position: relative;
+    top: 25px;
+    left: 22px;
+    font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  /* identical to box height */
+  color: #000000;
+  
+  }
+  
+  .author_name{
+    position: relative;
+    top:55px;
+    left: 32px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+  /* identical to box height */
+    color: #767BFE;
+  }
+
+  .user_image{
+    position: relative;
+    left: 20px;
+    top: 50px;
+  }

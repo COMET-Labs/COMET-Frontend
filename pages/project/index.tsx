@@ -21,6 +21,19 @@ export default function Project(){
                 <div className={styles.big_card}>
                     <div>
                         {/* Background image and intro content here */}
+                        
+                        <div className={styles.intro} style={{backgroundImage:`url(${ProjectData["image"]})`}}>
+                            <div className="col-lg-12">
+                                <div className="row">
+                                    <h1 className={styles.project_name}>{ProjectData["project_name"]}</h1>
+                                </div>
+                                <div className="row">
+                                    <img src={ProjectData["user"]} className={styles.user_image}></img>
+                                    <h3 className={styles.author_name}>{ProjectData["name"]}</h3>
+                                </div>
+                            </div>
+                        </div>
+               
                     </div>
                     <div className="container">
                         <div className="row">
