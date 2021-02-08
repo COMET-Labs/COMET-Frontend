@@ -1,6 +1,6 @@
 import styles from './login.module.scss';
 import { Button, Form } from 'react-bootstrap';
-
+import { LINKEDIN_URL } from "./auth";
 function LoginBox(props) {
   function handleChange() {
     props.onChange(props.form + 1);
@@ -11,9 +11,11 @@ function LoginBox(props) {
         <Button className={styles.google_logo + ' mb-2'} variant="light" block>
           <img src="./img/google.svg" alt="Google" /> Login with Google
         </Button>
+        <a href={LINKEDIN_URL}>
         <Button className={styles.google_logo + ' mb-2'} variant="light" block>
           <img src="./img/linkedin.svg" alt="Linkedin" className={styles.linkedin_logo}/> Login with LinkedIn
         </Button>
+        </a>
         <div className="text-center"> <hr className={styles.hr}></hr> or <hr className={styles.hr}></hr></div>
         <Form action="/portfolio">
           <Form.Group controlId="formBasicEmail" className="mt-4">
