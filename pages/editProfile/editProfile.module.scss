@@ -1,0 +1,143 @@
+.edit_profile_page{
+    background-color: #f7f6f6;
+    padding:10px;
+}
+
+.all_content{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.main_heading{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(59, 59, 59);
+}
+
+.main_content{
+    margin-top: 20px;
+}
+
+.step_selected{
+    background-color: white;
+    color: #767bfe;
+    border-left: 8px solid #767bfe;
+    height: 40px;
+    cursor: pointer;
+}
+
+.step_not_selected{
+    color: gray;
+    cursor: pointer;
+}
+
+.step_heading{
+    text-align: center;
+    padding-top: 5px;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.step_content{
+    background-color: white;
+    padding:15px;
+    border-radius: 0px 10px 10px 10px;
+}
+
+.step_content_heading{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(59, 59, 59);
+}
+
+.input_container{
+    margin-top: 20px;
+}
+
+.step_content_side_section{
+    border-right: 1px solid rgb(185, 184, 184);
+    height: 100%;
+}
+
+.enter_details_heading{
+    font-size: 0.8rem;
+    color: gray;
+    font-weight: 500;
+}
+
+.step_content_section_button{
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgb(206, 206, 206);
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-right: 12.5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.step_content_section_button_text{
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    color:#1bc47d;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50%;
+    border: 3px solid #1bc47d;
+}
+
+.step_content_main{
+    padding: 10px;
+}
+
+.image_grid{
+    position: relative;
+    padding-right: 10px;
+}
+
+.input_image{
+    width: 100%;
+    height: 180px;
+    border-radius: 7.5px;
+}
+
+.camera_icon{
+    position: absolute;
+    color:#1bc47d;
+    right: -10px;
+    background-color: white;
+    margin-top: -15px;
+    box-shadow: 1px 1px 10px rgb(206, 206, 206);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 5.5px;
+    transition: transform 0.2s;
+}
+
+.camera_icon:hover{
+    transform: scale(1.2);
+}
+
+.name_label{
+    color: gray;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.name_input{
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid gray;
+    height: 50px;
+    padding-left: 15px;
+    width: 90%;
+    margin-top: 10px;
+}
