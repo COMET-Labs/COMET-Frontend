@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 import MenuIcon from '@material-ui/icons/Menu';
 import CheckCircleOutlineOutlinedIcon from '@material-ui/icons/CheckCircleOutlineOutlined';
 import CameraAltIcon from '@material-ui/icons/CameraAlt';
+import TextField from '@material-ui/core/TextField';
 
 export default function editProfile(){
     const [step, setStep] = useState(0);
@@ -14,7 +15,21 @@ export default function editProfile(){
     //STATE HOOKS FOR WORK EXPERIENCE
     const [workExperience, setWorkExperience] = useState(["ASd","Ads","ASD","ADS"]);
     const [selectedWorkExperience, setSelectedWorkExperience] = useState(-1);
-    
+    const [workExperienceImage, setWorkExperienceImage] = useState("https://images.unsplash.com/photo-1600456899121-68eda5705257?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1125&q=80");
+    const [workExperienceJoiningDate, setWorkExperienceJoiningDate] = useState(null);
+    const [workExperienceDescription, setWorkExperienceDescription] = useState("");
+
+    //RELEAVANT FUNCTIONS FOR WORK EXPERIENCE
+    const setImageWE = (e)=>{
+        var input = e.target;
+        var reader = new FileReader();
+        reader.onload = function(){
+            var dataUrl: string = reader.result as string;
+            setWorkExperienceImage(dataUrl);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+
     const isSmall = useMediaQuery({
         query: '(max-width: 960px)'
     });
@@ -294,10 +309,15 @@ export default function editProfile(){
                                     <Grid item className={styles.step_content_main} xs={10} sm={10} md={9} lg={9}>
                                         <Grid container>
                                             <Grid item className={styles.image_grid} xs={12} sm={12} md={6} lg={5}>
-                                                <img src="https://images.unsplash.com/photo-1600456899121-68eda5705257?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1125&q=80"
+                                                <img src={workExperienceImage}
                                                  className={styles.input_image}></img>
                                                  <div className={styles.camera_icon}>
-                                                     <CameraAltIcon></CameraAltIcon>
+                                                    <label htmlFor="getFileWE"><CameraAltIcon></CameraAltIcon></label>
+                                                    <input type="file" 
+                                                    id="getFileWE" 
+                                                    style={{display:"none"}}
+                                                    accept="image/*"
+                                                    onChange={(e)=>{setImageWE(e)}}></input>
                                                  </div>
                                             </Grid>
                                             <Grid item xs={12} sm={12} md={6} lg={7}>
@@ -308,6 +328,26 @@ export default function editProfile(){
                                                 className={styles.name_input}
                                                 placeholder="Enter company name">
                                                 </input>
+                                            </Grid>
+                                            <Grid item xs={12} sm={12} md={6} lg={5}>
+                                                <h3 className={styles.date_label}>
+                                                    Joining Date
+                                                </h3>
+                                            </Grid>
+                                            <Grid item xs={12} sm={12} md={6} lg={7}>
+                                                <h3 className={styles.date_label}>
+                                                    Description
+                                                </h3>
+                                                <textarea 
+                                                className={styles.description_input} 
+                                                rows={8} 
+                                                cols={30}
+                                                value={workExperienceDescription}
+                                                onChange={(e)=>{
+                                                    if(e.target.value.length<=240)
+                                                    setWorkExperienceDescription(e.target.value)
+                                                }}></textarea>
+                                                <p className={styles.word_length}>{workExperienceDescription.length}/240</p>
                                             </Grid>
                                         </Grid>
                                     </Grid>

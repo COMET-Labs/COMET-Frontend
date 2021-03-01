@@ -141,3 +141,28 @@
     width: 90%;
     margin-top: 10px;
 }
+
+.date_label{
+    color: gray;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.description_input{
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid gray;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+}
+
+.word_length{
+    color: rgb(150, 149, 149);
+    text-align: right;
+    margin-top: -35px;
+    position: absolute;
+    right: 45px;
+}
