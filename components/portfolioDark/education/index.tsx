@@ -4,9 +4,9 @@ function EducationDark(props) {
   return (
     <div>
       <h1 className={styles.edu_header}>EDUCATION</h1>
-      {props.params.map((institute)=>{
+      {props.params.map((institute,index)=>{
         return(
-          <div className="container">
+          <div className="container" key={index}>
             <div className={"row "+styles.institute}>
               <img src={institute.image} className={"col-lg-4 col-md-6 col-sm-12 "+styles.image}></img>
               <div className="col-lg-8 col-md-6 col-sm-12">
