@@ -166,3 +166,41 @@
     position: absolute;
     right: 45px;
 }
+
+.presently_working{
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.presently_working_icon{
+    color:#1bc47d;
+    margin-left: 20px;
+}
+
+.previous_button{
+    color:#1bc47d;
+    border: 1.75px solid #1bc47d;
+    border-radius: 20px;
+    text-align: center;
+    height: 50px;
+    padding-top: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    max-width: 250px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.save_and_next_button{
+    background-color: #1bc47d;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    height: 50px;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    max-width: 250px;
+    margin-left: 5px;
+    cursor: pointer;
+}

@@ -7,8 +7,20 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CheckCircleOutlineOutlinedIcon from '@material-ui/icons/CheckCircleOutlineOutlined';
 import CameraAltIcon from '@material-ui/icons/CameraAlt';
 import TextField from '@material-ui/core/TextField';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+    textField: {
+      marginTop: theme.spacing(2),
+      width: 200,
+      border: "1px solid gray",
+      borderRadius: "10px",
+      padding:"5px",
+    },
+  }));
 
 export default function editProfile(){
+    const classes = useStyles();
     const [step, setStep] = useState(0);
     const [selectedStep, setSelectedStep] = useState(0);
 
@@ -16,7 +28,8 @@ export default function editProfile(){
     const [workExperience, setWorkExperience] = useState(["ASd","Ads","ASD","ADS"]);
     const [selectedWorkExperience, setSelectedWorkExperience] = useState(-1);
     const [workExperienceImage, setWorkExperienceImage] = useState("https://images.unsplash.com/photo-1600456899121-68eda5705257?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1125&q=80");
-    const [workExperienceJoiningDate, setWorkExperienceJoiningDate] = useState(null);
+    const [workExperienceJoiningDate, setWorkExperienceJoiningDate] = useState(undefined);
+    const [workExperienceEndDate, setWorkExperienceEndDate] = useState(undefined);
     const [workExperienceDescription, setWorkExperienceDescription] = useState("");
 
     //RELEAVANT FUNCTIONS FOR WORK EXPERIENCE
@@ -333,6 +346,34 @@ export default function editProfile(){
                                                 <h3 className={styles.date_label}>
                                                     Joining Date
                                                 </h3>
+                                                <TextField
+                                                type="date"
+                                                defaultValue="2020-03-02"
+                                                className={classes.textField}
+                                                >
+                                                </TextField>
+                                                <h3 className={styles.date_label}>
+                                                    End Date
+                                                </h3>
+                                                <TextField
+                                                type="date"
+                                                defaultValue="2020-03-02"
+                                                className={classes.textField}
+                                                disabled={workExperienceEndDate==="Currently Working"}
+                                                onChange={(e)=>{setWorkExperienceEndDate(e.target.value)}}
+                                                >
+                                                </TextField>
+                                                <br></br>
+                                                <div className={styles.presently_working}
+                                                onClick={()=>{
+                                                    if(workExperienceEndDate!=="Currently Working")
+                                                    setWorkExperienceEndDate("Currently Working");
+                                                    else
+                                                    setWorkExperienceEndDate(undefined);
+                                                    }}>
+                                                <span>Working presently</span>
+                                                <span className={styles.presently_working_icon}><CheckCircleOutlineOutlinedIcon></CheckCircleOutlineOutlinedIcon></span>
+                                                </div>
                                             </Grid>
                                             <Grid item xs={12} sm={12} md={6} lg={7}>
                                                 <h3 className={styles.date_label}>
@@ -348,6 +389,16 @@ export default function editProfile(){
                                                     setWorkExperienceDescription(e.target.value)
                                                 }}></textarea>
                                                 <p className={styles.word_length}>{workExperienceDescription.length}/240</p>
+                                            </Grid>
+                                            <Grid style={{marginTop:"40px"}} item xs={12} sm={12} md={6} lg={6}>
+                                                <div className={styles.previous_button}>
+                                                    Previous
+                                                </div>
+                                            </Grid>
+                                            <Grid style={{marginTop:"40px"}} item xs={12} sm={12} md={6} lg={6}>
+                                                <div className={styles.save_and_next_button}>
+                                                    Save {"&"} next
+                                                </div>
                                             </Grid>
                                         </Grid>
                                     </Grid>
