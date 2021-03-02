@@ -17,6 +17,7 @@
     "drei": "^2.2.13",
     "font-awesome": "^4.7.0",
     "lerp": "^1.0.3",
+    "netlify-cli": "^3.4.2",
     "next": "10.0.2",
     "next-transpile-modules": "^6.0.0",
     "react": "17.0.1",

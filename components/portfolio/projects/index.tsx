@@ -4,9 +4,9 @@ function Projects(props) {
   return (
     <div>
       <h1 className={styles.projects_header}>WORKS AND PROJECTS</h1>
-      {props.params.map((project)=>{
+      {props.params.map((project,index)=>{
         return(
-          <div className="container">
+          <div className="container" key={index}>
             <div className={"row "+styles.project}>
               <img src={project.image} className={"col-lg-4 col-md-6 col-sm-12 "+styles.image}></img>
               <div className="col-lg-8 col-md-6 col-sm-12">
