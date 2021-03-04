@@ -269,3 +269,41 @@
     color: rgb(85, 85, 85);
     margin-bottom: -5px;
 }
+
+.terms_and_conditions{
+    color:blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.club_card{
+    margin-bottom: 15px;
+    margin-left: 10px;
+    padding:10px;
+    padding-left: 30px;
+    box-shadow: 1px 1px 10px rgb(206, 206, 206);
+    border-radius: 15px;
+}
+
+.club_image{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.club_name{
+    font-size: 1.1rem;
+}
+
+.join_club{
+    padding-top: 5px;
+    text-align: right;
+    padding-right: 30px;
+    color: #767bfe;
+    cursor: pointer;
+}
+
+.join_icon{
+    color: #1bc47d;
+    margin-left: 20px;
+}

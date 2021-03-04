@@ -12,6 +12,7 @@ import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Slider from '@material-ui/core/Slider';
 import CancelOutlinedIcon from '@material-ui/icons/CancelOutlined';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 
 toast.configure();
 
@@ -61,7 +62,6 @@ export default function editProfile(){
     const [step, setStep] = useState(4);
     const [selectedStep, setSelectedStep] = useState(4);
 
-
     //TOASTS
 
     const successToast = (message)=>{
@@ -88,6 +88,8 @@ export default function editProfile(){
             });
     }
 
+    //STATE HOOK FOR DRAWER FOR SIDE SECTION ON SMALL WIDTH DEVICES
+    const [open, setOpen] = useState(false);
 
     //STATE HOOKS FOR WORK EXPERIENCE
     const [workExperience, setWorkExperience] = useState([]);
@@ -112,6 +114,34 @@ export default function editProfile(){
     const [skills, setSkills] = useState([]);
     const [skillValue, setSkillValue] = useState(50);
     const [skillName, setSkillName] = useState("");
+
+    //STATE HOOKS FOR CLUB MEMBERSHIPS
+    const [clubs, setClubs] = useState([
+        {
+            name: "Coding",
+            joined: false
+        },
+        {
+            name: "Quantum Computing",
+            joined: false
+        },
+        {
+            name: "Cloud Computing",
+            joined: false
+        },
+        {
+            name: "Robotics",
+            joined: false
+        },
+        {
+            name: "IOT",
+            joined: false
+        },
+        {
+            name: "Machine Learning",
+            joined: false
+        },
+    ]);
 
     //RELEAVANT FUNCTIONS FOR WORK EXPERIENCE
     const setImageWE = (e)=>{
@@ -259,10 +289,10 @@ export default function editProfile(){
         }
     }
 
-
     const isSmall = useMediaQuery({
         query: '(max-width: 960px)'
     });
+
     return(
         <Layout darkTheme={false}>
             <div className={styles.edit_profile_page}>
@@ -450,8 +480,193 @@ export default function editProfile(){
                                 </Grid>
                             </Grid>
                         </Grid>
-                        :
-                        <div></div>
+                        :<Grid item xs={12} sm={12} md={4} lg={3}>
+                        <SwipeableDrawer
+                    open={open}
+                    onOpen={()=>{setOpen(true)}}
+                    onClose={()=>{setOpen(false)}}
+                    onBackdropClick={()=>{setOpen(false)}}
+                    >
+                        <div style={{padding:"10px"}}>
+                            <Grid container
+                            className={selectedStep==0?styles.step_selected:styles.step_not_selected}
+                            onClick={()=>{setSelectedStep(0)}}>
+                                <Grid className={styles.step_heading} item xs={10} sm={10} md={10} lg={10}>
+                                    <p>Basic Information</p>
+                                </Grid>
+                                <Grid item xs={2} sm={2} md={2} lg={2}>
+                                    {
+                                        step>0
+                                        ?
+                                        <div>
+                                            <CheckCircleOutlineOutlinedIcon style={{color:"#1bc47d",marginTop:"6px"}}>
+
+                                            </CheckCircleOutlineOutlinedIcon>
+                                        </div>
+                                        :
+                                        <div>
+
+                                        </div>
+                                    }
+                                </Grid>
+                            </Grid>
+                            <Grid container
+                            className={selectedStep==1?styles.step_selected:styles.step_not_selected}
+                            onClick={()=>{setSelectedStep(1)}}>
+                                <Grid className={styles.step_heading} item xs={10} sm={10} md={10} lg={10}>
+                                    <p>About Me</p>
+                                </Grid>
+                                <Grid item xs={2} sm={2} md={2} lg={2}>
+                                    {
+                                        step>1
+                                        ?
+                                        <div>
+                                            <CheckCircleOutlineOutlinedIcon style={{color:"#1bc47d",marginTop:"6px"}}>
+
+                                            </CheckCircleOutlineOutlinedIcon>
+                                        </div>
+                                        :
+                                        <div>
+
+                                        </div>
+                                    }
+                                </Grid>
+                            </Grid>
+                            <Grid container
+                            className={selectedStep==2?styles.step_selected:styles.step_not_selected}
+                            onClick={()=>{setSelectedStep(2)}}>
+                                <Grid className={styles.step_heading} item xs={10} sm={10} md={10} lg={10}>
+                                    <p>Social Accounts</p>
+                                </Grid>
+                                <Grid item xs={2} sm={2} md={2} lg={2}>
+                                    {
+                                        step>2
+                                        ?
+                                        <div>
+                                            <CheckCircleOutlineOutlinedIcon style={{color:"#1bc47d",marginTop:"6px"}}>
+
+                                            </CheckCircleOutlineOutlinedIcon>
+                                        </div>
+                                        :
+                                        <div>
+
+                                        </div>
+                                    }
+                                </Grid>
+                            </Grid>
+                            <Grid container
+                            className={selectedStep==3?styles.step_selected:styles.step_not_selected}
+                            onClick={()=>{setSelectedStep(3)}}>
+                                <Grid className={styles.step_heading} item xs={10} sm={10} md={10} lg={10}>
+                                    <p>Education</p>
+                                </Grid>
+                                <Grid item xs={2} sm={2} md={2} lg={2}>
+                                    {
+                                        step>3
+                                        ?
+                                        <div>
+                                            <CheckCircleOutlineOutlinedIcon style={{color:"#1bc47d",marginTop:"6px"}}>
+
+                                            </CheckCircleOutlineOutlinedIcon>
+                                        </div>
+                                        :
+                                        <div>
+
+                                        </div>
+                                    }
+                                </Grid>
+                            </Grid>
+                            <Grid container
+                            className={selectedStep==4?styles.step_selected:styles.step_not_selected}
+                            onClick={()=>{setSelectedStep(4)}}>
+                                <Grid className={styles.step_heading} item xs={10} sm={10} md={10} lg={10}>
+                                    <p>Work Experience</p>
+                                </Grid>
+                                <Grid item xs={2} sm={2} md={2} lg={2}>
+                                    {
+                                        step>4
+                                        ?
+                                        <div>
+                                            <CheckCircleOutlineOutlinedIcon style={{color:"#1bc47d",marginTop:"6px"}}>
+
+                                            </CheckCircleOutlineOutlinedIcon>
+                                        </div>
+                                        :
+                                        <div>
+
+                                        </div>
+                                    }
+                                </Grid>
+                            </Grid>
+                            <Grid container
+                            className={selectedStep==5?styles.step_selected:styles.step_not_selected}
+                            onClick={()=>{setSelectedStep(5)}}>
+                                <Grid className={styles.step_heading} item xs={10} sm={10} md={10} lg={10}>
+                                    <p>Projects</p>
+                                </Grid>
+                                <Grid item xs={2} sm={2} md={2} lg={2}>
+                                    {
+                                        step>5
+                                        ?
+                                        <div>
+                                            <CheckCircleOutlineOutlinedIcon style={{color:"#1bc47d",marginTop:"6px"}}>
+
+                                            </CheckCircleOutlineOutlinedIcon>
+                                        </div>
+                                        :
+                                        <div>
+
+                                        </div>
+                                    }
+                                </Grid>
+                            </Grid>
+                            <Grid container
+                            className={selectedStep==6?styles.step_selected:styles.step_not_selected}
+                            onClick={()=>{setSelectedStep(6)}}>
+                                <Grid className={styles.step_heading} item xs={10} sm={10} md={10} lg={10}>
+                                    <p>Skills</p>
+                                </Grid>
+                                <Grid item xs={2} sm={2} md={2} lg={2}>
+                                    {
+                                        step>6
+                                        ?
+                                        <div>
+                                            <CheckCircleOutlineOutlinedIcon style={{color:"#1bc47d",marginTop:"6px"}}>
+
+                                            </CheckCircleOutlineOutlinedIcon>
+                                        </div>
+                                        :
+                                        <div>
+
+                                        </div>
+                                    }
+                                </Grid>
+                            </Grid>
+                            <Grid container
+                            className={selectedStep==7?styles.step_selected:styles.step_not_selected}
+                            onClick={()=>{setSelectedStep(7)}}>
+                                <Grid className={styles.step_heading} item xs={10} sm={10} md={10} lg={10}>
+                                    <p>Club Membership</p>
+                                </Grid>
+                                <Grid item xs={2} sm={2} md={2} lg={2}>
+                                    {
+                                        step>7
+                                        ?
+                                        <div>
+                                            <CheckCircleOutlineOutlinedIcon style={{color:"#1bc47d",marginTop:"6px"}}>
+
+                                            </CheckCircleOutlineOutlinedIcon>
+                                        </div>
+                                        :
+                                        <div>
+
+                                        </div>
+                                    }
+                                </Grid>
+                            </Grid>
+                        </div>
+                    </SwipeableDrawer>
+                    </Grid>
                     }
                     <Grid item xs={12} sm={12} md={8} lg={9} className={styles.step_content}>
                         {
@@ -505,7 +720,7 @@ export default function editProfile(){
                                     {
                                         isSmall
                                         ?
-                                        <Grid item xs={12} sm={12}>Enter details about your work experience</Grid>
+                                        <Grid item xs={12} sm={12} md={12} lg={12}>Enter details about your work experience</Grid>
                                         :
                                         <div></div>
                                     }
@@ -515,8 +730,9 @@ export default function editProfile(){
                                             ?
                                             <p className={styles.enter_details_heading}>Enter details about your work experience</p>
                                             :
-                                            <div></div>
+                                            <p></p>
                                         }
+                                        
                                         {workExperience.map((data,index)=>{
                                             return(
                                                 <div style={{height:"50px"}}
@@ -840,10 +1056,23 @@ export default function editProfile(){
                             <div>
                                 <h2 className={styles.step_content_heading}>Skills</h2>
                                 <Grid container className={styles.input_container}>
-                                    <Grid item className={styles.step_content_side_section} xs={2} sm={2} md={3} lg={3}>
+                                    {
+                                        isSmall
+                                        ?
                                         <p className={styles.enter_details_heading}>Enter details about your skills</p>
+                                        :
+                                        <div></div>
+                                    }
+                                    <Grid item className={styles.step_content_side_section} xs={12} sm={12} md={3} lg={3}>
+                                        {
+                                            !isSmall
+                                            ?
+                                            <p className={styles.enter_details_heading}>Enter details about your skills</p>
+                                            :
+                                            <div></div>
+                                        }
                                     </Grid>
-                                    <Grid item id={skills.length.toString()} className={styles.step_content_main} xs={10} sm={10} md={9} lg={9}>
+                                    <Grid item className={styles.step_content_main} xs={12} sm={12} md={9} lg={9}>
                                         {
                                             skills.map((data,index)=>{
                                                 return(
@@ -855,16 +1084,13 @@ export default function editProfile(){
                                                             const skillArray = skills;
                                                             skillArray[index].rating = Number(value);
                                                             setSkills(skillArray);
-                                                        }} value={data.rating} valueLabelDisplay="auto" aria-label="pretto slider"/>
+                                                        }} defaultValue={data.rating} valueLabelDisplay="auto" aria-label="pretto slider"/>
                                                     </Grid>
                                                     <Grid item xs={2} sm={2} md={2} lg={2}>
                                                     <CancelOutlinedIcon 
                                                     style={{color:"#1bc47d",marginTop:"6px",cursor:"pointer"}}
                                                     onClick = {()=>{
-                                                        const skillArray = skills;
-                                                        skillArray.splice(index,index+1);
-                                                        console.log(skillArray)
-                                                        setSkills(skillArray);
+                                                        setSkills(skills.filter((skill)=>(skill.name!=data.name)));
                                                     }}></CancelOutlinedIcon>
                                                     </Grid>
                                                 </Grid>
@@ -877,7 +1103,8 @@ export default function editProfile(){
                                                     <input
                                                     className={styles.skill_input}
                                                     placeholder="Enter skill name"
-                                                    onChange={(e)=>{setSkillName(e.target.value)}}>
+                                                    onChange={(e)=>{setSkillName(e.target.value)}}
+                                                    value={skillName}>
                                                     </input>
                                                     <PrettoSlider onChange={(e,v)=>{setSkillValue(Number(v))}} valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={20} />
                                                 </Grid>
@@ -900,11 +1127,23 @@ export default function editProfile(){
                                                 +
                                             </p>
                                         </div>
-                                        </div>
-                                        
-                                        
-                                        
+                                        </div> 
+                                        <Grid container>
+                                        <Grid style={{marginTop:"40px"}} item xs={12} sm={12} md={6} lg={6}>
+                                            <div className={styles.previous_button}
+                                            onClick = {()=>{setSelectedStep(5)}}>
+                                                Previous
+                                            </div>
+                                        </Grid>
+                                        <Grid style={{marginTop:"40px"}} item xs={12} sm={12} md={6} lg={6}>
+                                            <div className={styles.save_and_next_button}
+                                            onClick = {()=>{setSelectedStep(7);setStep(7)}}>
+                                                Save {"&"} next
+                                            </div>
+                                        </Grid> 
+                                        </Grid>
                                     </Grid>
+                                    
                                 </Grid>
                             </div>
                             :
@@ -915,7 +1154,91 @@ export default function editProfile(){
                             selectedStep==7
                             ?
                             <div>
-
+                                <h2 className={styles.step_content_heading}>Technical Clubs Membership</h2>
+                                <Grid container className={styles.input_container}>
+                                    {
+                                        isSmall
+                                        ?
+                                        <p className={styles.enter_details_heading}>Select the technical clubs you want to be member of</p>
+                                        :
+                                        <div></div>
+                                    }
+                                    <Grid item className={styles.step_content_side_section} xs={12} sm={12} md={3} lg={3}>
+                                        {
+                                            !isSmall
+                                            ?
+                                            <div>
+                                            <p className={styles.enter_details_heading}>Select the technical clubs you want to be member of</p>
+                                            <p className={styles.enter_details_heading}
+                                            style={{marginTop:"400px"}}>
+                                                Kindly read the <span className={styles.terms_and_conditions}>Club's Terms and Conditions</span> before joining any Technical Club
+                                            </p>
+                                            </div>
+                                            :
+                                            <div></div>
+                                        }
+                                    </Grid>
+                                    <Grid item className={styles.step_content_main} xs={12} sm={12} md={9} lg={9}>
+                                        {
+                                            clubs.map((data)=>{
+                                                return(
+                                                    <Grid container className={styles.club_card}>
+                                                        <Grid item xs={3} sm={3} md={2} lg={2}>
+                                                            <img className={styles.club_image} src={"/img/default_img.png"}></img>
+                                                        </Grid>
+                                                        <Grid item style={{paddingTop:"5px"}} xs={6} sm={6} md={7} lg={7}>
+                                                            <p className={styles.club_name}>{data.name}</p>
+                                                        </Grid>
+                                                        <Grid item className={styles.join_club} xs={3} sm={3} md={3} lg={3}
+                                                        onClick={()=>{setClubs(clubs.map(c=>c.name===data.name?{...c,joined: !c.joined}:c))}}>
+                                                            <span>
+                                                                {data.joined===true
+                                                                ?
+                                                                    "Joined"
+                                                                :
+                                                                    "Join"
+                                                                }
+                                                            </span>
+                                                            {
+                                                                data.joined!==true
+                                                                ?
+                                                                <CheckCircleOutlineOutlinedIcon
+                                                                className={styles.join_icon}></CheckCircleOutlineOutlinedIcon>
+                                                                :
+                                                                <CancelOutlinedIcon
+                                                                className={styles.join_icon}></CancelOutlinedIcon>
+                                                            }
+                                                        </Grid>
+                                                    </Grid>    
+                                                )
+                                            })
+                                        }
+                                        {
+                                            isSmall
+                                            ?
+                                            <p className={styles.enter_details_heading} style={{marginLeft:"10px"}}>
+                                                Kindly read the <span className={styles.terms_and_conditions}>Club's Terms and Conditions</span> before joining any Technical Club
+                                            </p>
+                                            :
+                                            <div></div>
+                                        }
+                                        <Grid container>
+                                        <Grid style={{marginTop:"40px"}} item xs={12} sm={12} md={6} lg={6}>
+                                            <div className={styles.previous_button}
+                                            onClick = {()=>{setSelectedStep(6)}}>
+                                                Previous
+                                            </div>
+                                        </Grid>
+                                        <Grid style={{marginTop:"40px"}} item xs={12} sm={12} md={6} lg={6}>
+                                            <div className={styles.save_and_next_button}
+                                            onClick = {()=>{setSelectedStep(7);setStep(7)}}>
+                                                Save {"&"} next
+                                            </div>
+                                        </Grid> 
+                                        </Grid>
+                                    </Grid>
+                                    
+                                </Grid>
                             </div>
                             :
                             <div>
@@ -939,8 +1262,10 @@ export default function editProfile(){
                             width:"40px",
                             height:"40px",
                             marginLeft:"10px",
-                            marginTop:"10px"
-                        }}>
+                            marginTop:"10px",
+                            cursor:"pointer"
+                        }}
+                        onClick={()=>{setOpen(true);console.log("Sda")}}>
                         </MenuIcon>
                     </div>
                     :
