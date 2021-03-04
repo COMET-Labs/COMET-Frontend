@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+.brand_intro {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 3.5rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  color: #fff;
+  span {
+    display: block;
+    font-size: 6rem;
+  }
+  .smalltext {
+    display: block;
+    font-size: 3rem;
+  }
+  @media (max-width: 786px) {
+    span {
+      font-size: 3rem;
+    }
+    .smalltext {
+      font-size: 1.5rem;
+    }
+  }
+}

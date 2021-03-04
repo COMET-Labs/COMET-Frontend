@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@450&display=swap');
+
+.top_heading{
+  font-family: 'Oswald', sans-serif;
+}
+
+.card{
+position: absolute;
+
+height: 540px;
+left: 50px;
+top: 25px;
+border-radius: 16px;
+box-shadow: 1px 1px 10px rgb(206, 206, 206);
+font-family: Poppins;
+background-color: white;
+}
+.search{
+position: relative;
+height: 38px;
+top: 11px;
+}
+
+.bar{
+  background-color: #f1f1f1;
+  border-radius: 100px;
+  border: none;
+}
+
+.fa {
+    color: #707070;
+}
+
+.title{
+font-family: Poppins;
+font-style: normal;
+font-weight:bolder;
+font-size: 14px;
+line-height: 21px;
+margin-top: 40px;
+margin-bottom: 10px;
+color: #000000;
+}
+
+.text{
+  font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 11px;
+line-height: 16px;
+/* identical to box height */
+margin-top: 6px;
+margin-bottom: 6px;
+color: #555555;
+}
+
+.link{
+color:#20C95C;
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 11px;
+line-height: 16px;
+}
+
+.create_project{
+  border-radius: 20px;
+  background-color:#20c95c;
+  margin-left: 20px;
+  color: white;
+  border: none;
+  height: 40.45px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  width: 90%;
+}
+
+.create_project_mobile{
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 100%;
+  background-color:#20c95c;
+  color: white;
+  border: none;
+  height: 40.45px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}

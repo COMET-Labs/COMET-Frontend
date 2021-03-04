@@ -1,0 +1,46 @@
+.card {
+  margin-top: 15px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgb(206, 206, 206);
+  padding-bottom: 5px;
+}
+
+.round {
+  border-radius: 20px !important;
+}
+.profile {
+  width: 540px;
+  height: 260px !important;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+}
+
+.author_name {
+  font-size: 0.8rem;
+}
+
+.project_name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgb(77, 76, 76);
+}
+
+.project_image {
+  width: 100%;
+  border-radius: 15px;
+  height: 200px;
+}
+
+.project_description {
+  font-size: 0.8rem;
+  color: rgb(104, 103, 103);
+}
+
+.like_ctr {
+  text-align: left;
+  color: rgb(2, 180, 2);
+}
