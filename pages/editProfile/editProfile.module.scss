@@ -51,7 +51,27 @@
     font-weight: 700;
     color: rgb(59, 59, 59);
 }
-
+.BasicInfo_img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;  
+}
+.BasicInfo_cameraIcon{
+     position: absolute;
+     color:#1bc47d;
+     left:150px;
+     bottom: 10px;
+     background-color: white;
+     margin-top: -15px;
+     box-shadow: 1px 1px 10px rgb(206, 206, 206);
+     border-radius: 50%;
+     width: 40px;
+     height: 40px;
+     text-align: center;
+     cursor: pointer;
+     padding-top: 5.5px;
+     transition: transform 0.2s;
+}
 .input_container{
     margin-top: 20px;
 }
@@ -130,8 +150,20 @@
     font-size: 1.3rem;
     font-weight: 600;
     margin-top: 10px;
+    margin-left: 10px;
 }
-
+.BasicInfo_nameInput{
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid gray;
+    height: 50px;
+    padding-left: 15px;
+     width: 100%;
+    // font-size: 25px;
+    margin-top: 10px; 
+    padding: 10px;
+    margin-left: 10px;
+}
 .name_input{
     border-radius: 10px;
     outline: none;
@@ -191,6 +223,22 @@
     cursor: pointer;
 }
 
+.add_newProfile_button_text{
+    background-color: #29AB87;
+    color: white;
+    border-radius: 6px;
+    text-align: center;
+    height: 26px;
+    padding:10;
+    font-weight:normal;
+    font-size: 1rem;
+    max-width: 316px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    cursor: pointer; 
+    
+}
 .save_and_next_button{
     background-color: #1bc47d;
     color: white;
@@ -204,7 +252,17 @@
     margin-left: 5px;
     cursor: pointer;
 }
-
+.socilaMedia_LinkInput{
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid gray;
+    height: 50px;
+    padding-left: 15px;
+     width: 80%;
+    margin-top: 10px; 
+    padding: 10px;
+    margin-left: 10px;
+}
 .link_input{
     border-radius: 10px;
     outline: none;
@@ -215,7 +273,14 @@
     margin-top: 10px;
     margin-bottom: 15px;
 }
-
+.SocialMedia_container{
+    margin-bottom: 10px;
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px rgb(206, 206, 206); 
+}
 .skill_container{
     margin-bottom: 10px;
     padding-left: 25px;
