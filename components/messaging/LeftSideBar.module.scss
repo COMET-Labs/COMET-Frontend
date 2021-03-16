@@ -1,0 +1,64 @@
+/*! ************ Left Sidebar Styles *********** !*/
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header__title {
+    color: #707070;
+  }
+  .eachGroup__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .avatar__container {
+    flex: 20%;
+  }
+  
+  .eachGroup__content {
+    flex: 80%;
+    overflow: hidden;
+  }
+  
+  .eachGroup__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 18px;
+    color: #707070;
+    margin-bottom: 0.5rem;
+  }
+  .eachGroup__description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 16px;
+    color: #959595;
+  }
+  .footer__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+  }
+  
+  .eachCategory {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .category__name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #959595;
+  }
+  

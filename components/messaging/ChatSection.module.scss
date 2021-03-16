@@ -1,0 +1,74 @@
+/*! ************ Chat Section Styles *********** !*/
+.chatSection {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .header {
+    flex: 10%;
+  }
+  .main {
+    flex: 80%;
+    overflow-y: scroll;
+  }
+  .footer {
+    flex: 10%;
+  }
+  /* chat section header styles */
+  .header__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header__left {
+    display: flex;
+    align-items: center;
+  }
+  .header__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+  }
+  .header__title {
+    color: #707070;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+  .header__subTitle {
+    font-size: 0.75rem;
+    color: #959595;
+    margin-bottom: 0px;
+  }
+  .header__right {
+    display: flex;
+  }
+  
+  /* chat section Footer styles */
+  .footer__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer__input {
+    width: 100%;
+  }
+  
+  .footer__container input {
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    height: 2rem;
+    border-bottom: 2px solid #c4c4c4;
+    background-color: transparent;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  .footer__container input:focus {
+    border-bottom: 2px solid #707070;
+  }
+  

@@ -1389,7 +1389,18 @@ export default function editProfile(){
                                                     setWorkExperienceDescription(e.target.value)
                                                 }}></textarea>
                                                 <p className={styles.word_length}>{workExperienceDescription.length}/240</p>
-                                              
+                                                {
+                                                    selectedWorkExperience!==-1
+                                                    ?
+                                                    <div>
+                                                        <div className={styles.save_and_next_button}
+                                                        onClick={()=>{addWorkExperience(selectedWorkExperience)}}>
+                                                            Update
+                                                        </div>
+                                                    </div>
+                                                    :
+                                                    <div></div>
+                                                }
                                             </Grid>
                                             <Grid style={{marginTop:"40px"}} item xs={12} sm={12} md={6} lg={6}>
                                                 <div className={styles.previous_button}
