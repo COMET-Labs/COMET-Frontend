@@ -18,7 +18,7 @@
     "font-awesome": "^4.7.0",
     "lerp": "^1.0.3",
     "netlify-cli": "^3.4.2",
-    "next": "10.0.2",
+    "next": "^10.0.8",
     "next-transpile-modules": "^6.0.0",
     "react": "17.0.1",
     "react-bootstrap": "^1.4.0",
@@ -27,6 +27,8 @@
     "react-responsive": "^8.2.0",
     "react-three-fiber": "^5.3.11",
     "react-toastify": "^7.0.3",
+    "sharp": "^0.26.3",
+    "social-media-icons-react": "^1.1.2",
     "three": "^0.124.0"
   },
   "devDependencies": {

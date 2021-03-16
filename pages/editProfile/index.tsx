@@ -2,6 +2,12 @@ import {useState,useEffect} from 'react';
 import Layout from '../../components/layouts/default';
 import styles from './editProfile.module.scss';
 import Grid from '@material-ui/core/Grid';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import BookIcon from '@material-ui/icons/Book';
+import LanguageIcon from '@material-ui/icons/Language';
+import {Row,Col} from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import MenuIcon from '@material-ui/icons/Menu';
 import CheckCircleOutlineOutlinedIcon from '@material-ui/icons/CheckCircleOutlineOutlined';
@@ -13,7 +19,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Slider from '@material-ui/core/Slider';
 import CancelOutlinedIcon from '@material-ui/icons/CancelOutlined';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-
+import zIndex from '@material-ui/core/styles/zIndex';
+import {SocialMediaIconsReact} from 'social-media-icons-react';
 toast.configure();
 
 const useStyles = makeStyles((theme) => ({
@@ -59,8 +66,8 @@ rail: {
 
 export default function editProfile(){
     const classes = useStyles();
-    const [step, setStep] = useState(4);
-    const [selectedStep, setSelectedStep] = useState(4);
+    const [step, setStep] = useState(0);
+    const [selectedStep, setSelectedStep] = useState(0);
 
     //TOASTS
 
@@ -90,7 +97,40 @@ export default function editProfile(){
 
     //STATE HOOK FOR DRAWER FOR SIDE SECTION ON SMALL WIDTH DEVICES
     const [open, setOpen] = useState(false);
+    //STATE HOOKS FOR BASICINFO
+    const[firstName,setFirstName]=useState("");
+    const[lastName,setLastName]=useState("");
+    const[headline,setHeadline]=useState("");
+    const[email,setEmail]=useState("");
+    const[country,setcountry]=useState("");
+    const[mobileNumber,setMobileNumber]=useState("");
+    const[Address,setAddress]=useState("");
 
+    //STATE HOOKS FOR ABOUT ME
+    const [Aboutme, setAboutme] = useState("");
+    //STATE HOOKSFOR SOCIAL MEDIA
+    const [socialMedia, setsocialMedia] = useState([]);
+    const[URLimage,setURLimage]=useState(<LanguageIcon style={{ borderRadius:"50%",marginBottom:"20px",fontSize:"45px"}} />);
+    const [socialMediaNames, setsocialMediaNames] = useState([
+        {name:"Select",value:" "},
+        {name:"Linkedin",value:"linkedin"},
+        {name:"Instagram", value:"instagram"},
+        {name:"Github",value:"github"},
+        {name:"kaggle",value:"kaggle"},
+        {name:"Portfolio",value:"portfolio"},
+        {name:"Stack Overflow",value:"Stack Overflow"},
+        {name:"Blog",value:"Blog"}
+    ]);
+    const [socialMediaName,setsocialMediaName]=useState("");
+    const [SocialMediaURL, setSocialMediaURL] = useState("");
+     //STATE HOOKS FOR Education
+     const [Education, setEducation] = useState([]);
+     const [selectedEducation, setSelectedEducation] = useState(-1);
+     const [InstituteName, setInstituteName] = useState("");
+     const [InstituteImage, setInstituteImage] = useState("https://images.unsplash.com/photo-1600456899121-68eda5705257?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1125&q=80");
+     const [InstituteJoiningDate, setInstituteJoiningDate] = useState(undefined);
+     const [InstituteEndDate, setInstituteEndDate] = useState(undefined);
+     const [EducationDescription, setEducationDescription] = useState("");
     //STATE HOOKS FOR WORK EXPERIENCE
     const [workExperience, setWorkExperience] = useState([]);
     const [selectedWorkExperience, setSelectedWorkExperience] = useState(-1);
@@ -142,6 +182,70 @@ export default function editProfile(){
             joined: false
         },
     ]);
+
+     //RELEAVANT FUNCTIONS FOR EDUCATION
+     const setImageEducation = (e)=>{
+        var input = e.target;
+        var reader = new FileReader();
+        reader.onload = function(){
+            var dataUrl: string = reader.result as string;
+            setInstituteImage(dataUrl);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+
+    const addEducation= (index)=>{
+        if(InstituteName!==""){
+            if(InstituteImage!=="https://images.unsplash.com/photo-1600456899121-68eda5705257?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1125&q=80"){
+                if(InstituteJoiningDate!==undefined){
+                    if(InstituteEndDate!==undefined){
+                        if(EducationDescription!==""){
+                            const EducationObject = {
+                                name: InstituteName,
+                                image: InstituteImage,
+                                joinDate: InstituteJoiningDate,
+                                endDate: InstituteEndDate,
+                                description: EducationDescription
+                            };
+                            if(index===-1){
+                                setEducation([...Education, EducationObject]);
+                            }else{
+                                const EducationArray = Education;
+                                EducationArray[index] = EducationObject;
+                                setEducation(EducationArray);
+                                setSelectedEducation(-1);
+                            }
+                            
+                            setEducationHooks("",
+                            "https://images.unsplash.com/photo-1600456899121-68eda5705257?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1125&q=80",
+                            undefined,
+                            undefined,
+                            "")
+                            successToast("Saved EducationField successfully");
+                        }else{
+                            errorToast("Please enter description");
+                        }
+                    }else{
+                        errorToast("Please select an end date");
+                    }
+                }else{
+                    errorToast("Please select a joining date");
+                }
+            }else{
+                errorToast("Please select an image");
+            }
+        }else{
+            errorToast("Please enter Institute name");
+        }
+    }
+
+    const setEducationHooks = (name, img, jd, ed, desc)=>{
+        setInstituteName(name);
+        setInstituteImage(img);
+        setInstituteJoiningDate(jd);
+        setInstituteEndDate(ed);
+        setEducationDescription(desc);
+    }
 
     //RELEAVANT FUNCTIONS FOR WORK EXPERIENCE
     const setImageWE = (e)=>{
@@ -277,7 +381,41 @@ export default function editProfile(){
         setProjectDescription(desc);
         setProjectLink(link);
     }
-
+ //RELEAVANT FUNCTIONS FOR SOCIALMEDIA
+ const handleChange=(e)=>{
+    setsocialMediaName(e.target.value)
+    if(e.target.value==="linkedin"){
+        const icon = <LinkedInIcon color='action' style={{ borderRadius:"50%",marginBottom:"20px",fontSize:"45px"}}/>
+        setURLimage(icon)
+    }
+    else if(e.target.value==="instagram"){
+        const icon = <InstagramIcon color='action' style={{ borderRadius:"50%",marginBottom:"20px",fontSize:"45px"}}/>
+        setURLimage(icon)
+    }
+    else if(e.target.value==="github"){
+        const icon = <GitHubIcon color='action' style={{ borderRadius:"50%",marginBottom:"20px",fontSize:"45px"}}/>
+        setURLimage(icon)
+    }
+    else if(e.target.value==="Blog"){
+        const icon = <BookIcon color='action' style={{ borderRadius:"50%",marginBottom:"20px",fontSize:"45px"}}/>
+        setURLimage(icon)
+    }
+    else{
+        setURLimage(<LanguageIcon color='action' style={{ borderRadius:"50%",marginBottom:"20px",fontSize:"45px"}}/>)
+    }
+    
+ }
+ const addSocialMediaLinks = ()=>{
+     if(SocialMediaURL!==""){
+        setsocialMedia([...socialMedia,{icon: URLimage, URL: SocialMediaURL,name:socialMediaName}]);
+        setsocialMediaName("");
+        setSocialMediaURL("")
+     }
+     else{
+         errorToast("Please enter URL")
+     }
+    
+}
     //RELEAVANT FUNCTIONS FOR SKILLS
     const addSkill = ()=>{
         if(skillName!==""){
@@ -673,9 +811,113 @@ export default function editProfile(){
                             selectedStep==0
                             ?
                             <div>
-                                Basic Information
+                               <h2 className={styles.step_content_heading}>Basic Information</h2>
                                 <br></br>
-                                this div contains basic info related inputs
+                                <Grid container className={styles.input_container}>
+                                    <Grid item className={styles.step_content_side_section} xs={2} sm={2} md={3} lg={3}>
+                                    <Grid item className={styles.image_grid} xs={12} sm={12} md={6} lg={7}>
+                                                    <img src={workExperienceImage}
+                                                    className={styles.BasicInfo_img}></img>
+                                                    <div className={styles.BasicInfo_cameraIcon}>
+                                                        <label htmlFor="getFileWE"><CameraAltIcon></CameraAltIcon></label>
+                                                        <input type="file" 
+                                                        id="getFileWE" 
+                                                        style={{display:"none"}}
+                                                        accept="image/*"
+                                                        onChange={(e)=>{setImageWE(e)}}></input>
+                                                    </div>
+                                    </Grid>
+                                    </Grid>
+                                    
+                                    <div className={styles.step_content_main} style={{width:"70%"}}>
+                                        <Row>
+                                            <Col>
+                                                <h3 className={styles.name_label}>First name<span style={{color:"red"}}>*</span>
+                                                </h3>
+                                                <input
+                                                className={styles.BasicInfo_nameInput}
+                                                placeholder="Enter your first name"
+                                                value={firstName}
+                                                onChange={(e)=>{setFirstName(e.target.value)}}>
+                                                </input>
+                                            </Col>
+                                            <Col>
+                                                <h3 className={styles.name_label}>Last name<span style={{color:"red"}}>*</span>
+                                                </h3>
+                                                <input
+                                                className={styles.BasicInfo_nameInput}
+                                                placeholder="Enter your last name"
+                                                value={lastName}
+                                                onChange={(e)=>{setLastName(e.target.value)}}>
+                                                </input>
+                                            </Col>
+                                        </Row>
+                                    
+                                        <Row style={{marginLeft:"10px"}}>
+                                        <h3 className={styles.name_label}>Headline<span style={{color:"red"}}>*</span>
+                                                </h3>
+                                                <input
+                                                className={styles.BasicInfo_nameInput}
+                                                placeholder="Headline"
+                                                type="text"
+                                                value={headline}
+                                                onChange={(e)=>{setHeadline(e.target.value)}}>
+                                        </input>
+                                        </Row>
+                                        <Row>
+                                            <Col>
+                                            <h3 className={styles.name_label}>Email<span style={{color:"red"}}>*</span>
+                                                </h3>
+                                                <input
+                                                        className={styles.BasicInfo_nameInput}
+                                                        placeholder="Enter your e-mail"
+                                                        value={email}
+                                                        onChange={(e)=>{setEmail(e.target.value)}}>
+                                                </input>
+                                            </Col>
+                                            <Col>
+                                            <h3 className={styles.name_label}>Phone number<span style={{color:"red"}}>*</span>
+                                                </h3>
+                                            <Row>
+                                                <Col xl={4}>
+                                                <select value={country} className={styles.BasicInfo_nameInput} name="countries" id="cars" form="carform">
+                                                    <option value="+91">IND</option>
+                                                    <option value="1001">US</option>               
+                                                </select>
+                                                </Col>
+                                                <Col  xl={8}>
+                                                    <input
+                                                            className={styles.BasicInfo_nameInput}
+                                                            placeholder="Enter mobile number"
+                                                            value={mobileNumber}
+                                                            onChange={(e)=>{setMobileNumber(e.target.value)}}>
+                                                    </input>
+                                                </Col>
+                                            </Row>    
+                                            </Col>
+                                           
+                                        </Row>
+                                        <Row style={{marginLeft:"10px"}}>
+                                        <h3 className={styles.name_label}>Address<span style={{color:"red"}}>*</span>
+                                                </h3>
+                                                <input
+                                                className={styles.BasicInfo_nameInput}
+                                                placeholder="Enter Address"
+                                                value={Address}
+                                                onChange={(e)=>{setAddress(e.target.value)}}>
+                                        </input>
+                                        </Row>
+                                    <Row>
+                                        <Col style={{marginTop:"40px"}}  xs={12} sm={12} md={6} lg={6}>
+                                                <div className={styles.save_and_next_button}
+                                                onClick = {()=>{setSelectedStep(1);setStep(1)}}>
+                                                    Save {"&"} next
+                                                </div>
+                                        </Col>
+                                    </Row>
+                                    </div>
+                                           
+                                </Grid>
                             </div>
                             :
                             <div>
@@ -685,7 +927,64 @@ export default function editProfile(){
                             selectedStep==1
                             ?
                             <div>
-                                About Me
+                                  <div>
+                                <h2 className={styles.step_content_heading}>About me</h2>
+                                <Grid container className={styles.input_container}>
+                                    {
+                                        isSmall
+                                        ?
+                                        <Grid item xs={12} sm={12} md={12} lg={12}>Tell something about yourself. It may include your previous experience and achievements</Grid>
+                                        :
+                                        <div></div>
+                                    }
+                                    <Grid item className={styles.step_content_side_section} xs={2} sm={2} md={3} lg={3}>
+                                        {
+                                            !isSmall
+                                            ?
+                                            <p className={styles.enter_details_heading}>Tell something about yourself. It may include your previous experience and achievements</p>
+                                            :
+                                            <p></p>
+                                        }
+                                        
+                                    </Grid>
+                                    <Grid item className={styles.step_content_main} xs={10} sm={10} md={9} lg={9}>
+                                        <Grid container>
+                                           
+                                            <Grid style={{position:"relative",marginBottom:"100px"}} item xs={12} sm={12} md={12} lg={12} xl={12}>
+                                                <h3 className={styles.date_label}>
+                                                    About me<span style={{color:"red"}}>*</span>
+                                                </h3>
+                                                <textarea 
+                                                className={styles.description_input} 
+                                                rows={8} 
+                                                cols={30}
+                                                value={Aboutme}
+                                                onChange={(e)=>{
+                                                    if(e.target.value.length<=240)
+                                                    setAboutme(e.target.value)
+                                                }}></textarea>
+                                                <p className={styles.word_length}>{Aboutme.length}/240</p>
+                                              
+                                            </Grid>
+                
+                                            <Grid style={{marginTop:"40px"}} item xs={12} sm={12} md={6} lg={6}>
+                                                <div className={styles.previous_button}
+                                                onClick = {()=>{setSelectedStep(0)}}>
+                                                    Previous
+                                                </div>
+                                            </Grid>
+                                            <Grid style={{marginTop:"40px"}} item xs={12} sm={12} md={6} lg={6}>
+                                                <div className={styles.save_and_next_button}
+                                                onClick = {()=>{setSelectedStep(2);setStep(2)}}>
+                                                    Save {"&"} next
+                                                </div>
+                                            </Grid>
+                                        </Grid>
+                                        
+                                        
+                                    </Grid>
+                                </Grid>
+                            </div>
                             </div>
                             :
                             <div>
@@ -695,7 +994,112 @@ export default function editProfile(){
                             selectedStep==2
                             ?
                             <div>
-                                Social Accounts
+                                 <div>
+                                <h2 className={styles.step_content_heading}>Social Accounts</h2>
+                                <Grid container className={styles.input_container}>
+                                    {
+                                        isSmall
+                                        ?
+                                        <p className={styles.enter_details_heading}>Connect all your social accounts links to your website, blog, GitHub, LinkedIn, Stack Overflow, Dribbble, Kaggle or anywhere where your work stands out.</p>
+                                        :
+                                        <div></div>
+                                    }
+                                    <Grid item className={styles.step_content_side_section} xs={12} sm={12} md={3} lg={3}>
+                                        {
+                                            !isSmall
+                                            ?
+                                            <p className={styles.enter_details_heading}>Connect all your social accounts links to your website, blog, GitHub, LinkedIn, Stack Overflow, Dribbble, Kaggle or anywhere where your work stands out.</p>
+                                            :
+                                            <div></div>
+                                        }
+                                    </Grid>
+                                    <Grid item className={styles.step_content_main} xs={12} sm={12} md={9} lg={9}>
+                                        {
+                                            socialMedia.map((data,index)=>{
+                                                return(
+                                                    <Grid className={styles.skill_container} container>
+                                                    <Grid item xs={10} sm={10} md={10} lg={10}>
+                                                    <Row>
+                                                        <Col xl={4}>
+                                                            <h3 className={styles.skill_name}>{data.icon}</h3>
+                                                        </Col>
+                                                        <Col xl={7}>
+                                                            <p  style={{marginRight:"20px"}}>{data.URL}</p>
+                                                        </Col>
+                                                    <Col xl={1}>
+                                                        <Grid item xs={2} sm={2} md={2} lg={2}>
+                                                        <CancelOutlinedIcon 
+                                                        style={{color:"#1bc47d",marginTop:"6px",cursor:"pointer"}}
+                                                        onClick = {()=>{
+                                                            setsocialMedia(socialMedia.filter((Socialmedia)=>(Socialmedia.name!==data.name)));
+                                                        }}></CancelOutlinedIcon>
+                                                        </Grid>
+                                                    </Col>
+                                                    </Row>
+                                                    </Grid>
+                                                </Grid>
+                                                )
+                                            })
+                                        }
+                                        <div>
+                                        <Row>
+                                        <Col xl={4} >
+                                        
+                                        <select className={styles.socilaMedia_LinkInput} id="socialMediaNames"  onChange={handleChange}>
+                                        {socialMediaNames.map(index =>
+                                            <option  value={index.value}>{index.name}</option>
+                                        )};
+                                        </select>
+                                         
+                                        </Col>
+                                        <Col xl={8}>
+                                            <Grid  container>
+                                                <br/>
+                                                <input
+                                                    className={styles.socilaMedia_LinkInput}
+                                                    placeholder="Enter Your Profile Link"
+                                                    value={SocialMediaURL}
+                                                    onChange={(e)=>{setSocialMediaURL(e.target.value)}}>
+                                               </input>
+                                                <Grid item xs={2} sm={2} md={2} lg={2}>
+                                                <CheckCircleOutlineOutlinedIcon 
+                                                style={{color:"#1bc47d",marginTop:"20px",cursor:"pointer",marginLeft:"15px"}}
+                                                onClick={()=>{
+                                                    addSocialMediaLinks();
+                                                }}></CheckCircleOutlineOutlinedIcon>
+                                                </Grid>
+                                           
+                                              
+                                            </Grid>
+                                        </Col>
+                                        </Row>    
+                                        </div>
+                                        <div style={{width:"100%"}}>
+                                        <div className={styles.add_newProfile_button_text}
+                                        onClick={()=>{
+                                            addSocialMediaLinks();
+                                        }}>
+                                                + Add New Profile
+                                        </div>
+                                        </div> 
+                                        <Grid container>
+                                        <Grid style={{marginTop:"40px"}} item xs={12} sm={12} md={6} lg={6}>
+                                            <div className={styles.previous_button}
+                                            onClick = {()=>{setSelectedStep(1)}}>
+                                                Previous
+                                            </div>
+                                        </Grid>
+                                        <Grid style={{marginTop:"40px"}} item xs={12} sm={12} md={6} lg={6}>
+                                            <div className={styles.save_and_next_button}
+                                            onClick = {()=>{setSelectedStep(3);setStep(3)}}>
+                                                Save {"&"} next
+                                            </div>
+                                        </Grid> 
+                                        </Grid>
+                                    </Grid>
+                                    
+                                </Grid>
+                            </div>
                             </div>
                             :
                             <div>
@@ -705,8 +1109,152 @@ export default function editProfile(){
                             selectedStep==3
                             ?
                             <div>
-                                Education
-                            </div>
+                            <h2 className={styles.step_content_heading}>Education</h2>
+                            <Grid container className={styles.input_container}>
+                                {
+                                    isSmall
+                                    ?
+                                    <Grid item xs={12} sm={12} md={12} lg={12}>Enter details about your education </Grid>
+                                    :
+                                    <div></div>
+                                }
+                                <Grid item className={styles.step_content_side_section} xs={2} sm={2} md={3} lg={3}>
+                                    {
+                                        !isSmall
+                                        ?
+                                        <p className={styles.enter_details_heading}>Enter details about your education </p>
+                                        :
+                                        <p></p>
+                                    }
+                                    
+                                    {Education.map((data,index)=>{
+                                        return(
+                                            <div style={{height:"50px"}}
+                                            onClick={()=>{
+                                                setSelectedEducation(index);
+                                                setEducationHooks(data.name,data.image,data.joinDate,data.endDate,data.description);
+                                            }}>
+                                            <div className={styles.step_content_section_button}>
+                                                <p className={styles.step_content_section_button_text}>
+                                                    {index+1}
+                                                </p>
+                                            </div>
+                                            <br></br>
+                                            </div>
+                                        )
+                                        })
+                                    }
+                                    <div className={styles.step_content_section_button}
+                                    onClick = {()=>{
+                                        if(selectedEducation==-1){
+                                            addEducation(-1);
+                                        }else{
+                                            setSelectedEducation(-1);
+                                            setEducationHooks("",
+                                            "https://images.unsplash.com/photo-1600456899121-68eda5705257?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1125&q=80",
+                                            undefined,
+                                            undefined,
+                                            "");
+                                        }
+                                        }}>
+                                        <p className={styles.step_content_section_button_text}>
+                                            +
+                                        </p>
+                                    </div>
+                                </Grid>
+                                <Grid item className={styles.step_content_main} xs={10} sm={10} md={9} lg={9}>
+                                    <Grid container>
+                                        <Grid item className={styles.image_grid} xs={12} sm={12} md={6} lg={5}>
+                                            <img src={InstituteImage}
+                                            className={styles.input_image}></img>
+                                            <div className={styles.camera_icon}>
+                                                <label htmlFor="getFileWE"><CameraAltIcon></CameraAltIcon></label>
+                                                <input type="file" 
+                                                id="getFileWE" 
+                                                style={{display:"none"}}
+                                                accept="image/*"
+                                                onChange={(e)=>{setImageEducation(e)}}></input>
+                                            </div>
+                                        </Grid>
+                                        <Grid item xs={12} sm={12} md={6} lg={7}>
+                                            <h3 className={styles.name_label}>
+                                                Institute name<span style={{color:"red"}}>*</span>
+                                            </h3>
+                                            <input
+                                            className={styles.name_input}
+                                            placeholder="Enter Institute name"
+                                            value={InstituteName}
+                                            onChange={(e)=>{setInstituteName(e.target.value)}}>
+                                            </input>
+                                        </Grid>
+                                        <Grid item xs={12} sm={12} md={6} lg={5}>
+                                            <h3 className={styles.date_label}>
+                                                Joining Date
+                                            </h3>
+                                            <TextField
+                                            type="date"
+                                            defaultValue="2020-03-02"
+                                            className={classes.textField}
+                                            onChange={(e)=>{setInstituteJoiningDate(e.target.value)}}
+                                            >
+                                            </TextField>
+                                            <h3 className={styles.date_label}>
+                                                End Date
+                                            </h3>
+                                            <TextField
+                                            type="date"
+                                            defaultValue="2020-03-02"
+                                            className={classes.textField}
+                                            disabled={InstituteEndDate==="Studying Presently"}
+                                            onChange={(e)=>{setInstituteEndDate(e.target.value)}}
+                                            >
+                                            </TextField>
+                                            <br></br>
+                                            <div className={styles.presently_working}
+                                            onClick={()=>{
+                                                 if(InstituteEndDate!=="Studying Presently")
+                                                      setInstituteEndDate("Studying Presently");
+                                                    else
+                                                      setInstituteEndDate(undefined);
+                                                    }}>
+                                            <span>Studying Presently</span>
+                                            <span className={styles.presently_working_icon}><CheckCircleOutlineOutlinedIcon></CheckCircleOutlineOutlinedIcon></span>
+                                            </div>
+                                        </Grid>
+                                        <Grid style={{position:"relative"}} item xs={12} sm={12} md={6} lg={7}>
+                                            <h3 className={styles.date_label}>
+                                                Description
+                                            </h3>
+                                            <textarea 
+                                            className={styles.description_input} 
+                                            rows={8} 
+                                            cols={30}
+                                            value={EducationDescription}
+                                            onChange={(e)=>{
+                                                if(e.target.value.length<=240)
+                                                setEducationDescription(e.target.value)
+                                            }}></textarea>
+                                            <p className={styles.word_length}>{EducationDescription.length}/240</p>
+                                          
+                                        </Grid>
+                                        <Grid style={{marginTop:"40px"}} item xs={12} sm={12} md={6} lg={6}>
+                                            <div className={styles.previous_button}
+                                            onClick = {()=>{setSelectedStep(2)}}>
+                                                Previous
+                                            </div>
+                                        </Grid>
+                                        <Grid style={{marginTop:"40px"}} item xs={12} sm={12} md={6} lg={6}>
+                                            <div className={styles.save_and_next_button}
+                                            onClick = {()=>{setSelectedStep(4);setStep(4)}}>
+                                                Save {"&"} next
+                                            </div>
+                                        </Grid>
+                                    </Grid>
+                                    
+                                    
+                                </Grid>
+                            </Grid>
+                        </div>
                             :
                             <div>
                             </div>
