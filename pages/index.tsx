@@ -8,6 +8,7 @@ import state from '../components/landing-page/state';
 export default function Home() {
   const domContent = useRef();
   const scrollArea = useRef();
+  // @ts-ignore
   const onScroll = (e) => (state.top.current = e.target.scrollTop);
   useEffect(() => void onScroll({ target: scrollArea.current }), []);
   return (

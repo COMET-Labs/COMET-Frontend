@@ -4,9 +4,9 @@ function WorkExperienceDark(props) {
   return (
     <div>
       <h1 className={styles.work_header}>WORK EXPERIENCE</h1>
-      {props.params.map((company)=>{
+      {props.params.map((company,index)=>{
         return(
-          <div className="container">
+          <div className="container" key={index}>
             <div className={"row "+styles.company}>
               <img src={company.image} className={"col-lg-4 col-md-6 col-sm-12 "+styles.image}></img>
               <div className="col-lg-8 col-md-6 col-sm-12">

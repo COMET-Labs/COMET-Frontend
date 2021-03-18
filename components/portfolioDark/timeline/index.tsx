@@ -25,9 +25,9 @@ function TimeLineDark(props){
     <div>
     <h1 className={styles.timeline_header}>TIMELINE</h1>
     <Timeline align="alternate">
-        {props.work.map((company)=>{
+        {props.work.map((company,index)=>{
             return(
-                <TimelineItem>
+                <TimelineItem key={index}>
                     <TimelineOppositeContent>
                     <Typography className={styles.content} variant="body2" color="textSecondary">
                         <p style={{color:"#ebebeb"}}>{company.start}</p>

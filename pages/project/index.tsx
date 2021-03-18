@@ -21,6 +21,19 @@ export default function Project(){
                 <div className={styles.big_card}>
                     <div>
                         {/* Background image and intro content here */}
+                        
+                        <div className={styles.intro} style={{backgroundImage:`url(${ProjectData["image"]})`}}>
+                            <div className="col-lg-12">
+                                <div className="row">
+                                    <h1 className={styles.project_name}>{ProjectData["project_name"]}</h1>
+                                </div>
+                                <div className="row">
+                                    <img src={ProjectData["user"]} className={styles.user_image}></img>
+                                    <h3 className={styles.author_name}>{ProjectData["name"]}</h3>
+                                </div>
+                            </div>
+                        </div>
+               
                     </div>
                     <div className="container">
                         <div className="row">
@@ -38,9 +51,9 @@ export default function Project(){
                                 <div>
                                     <div style={{textAlign:"left"}}>
                                     {ProjectData["contributors"]
-                                    .map((data)=>{
+                                    .map((data,index)=>{
                                         return(
-                                            <span>
+                                            <span key={index}>
                                                 <img className={styles.contributor_image} src={data.image} />
                                             </span>
                                         )
@@ -52,9 +65,9 @@ export default function Project(){
                                 <div style={{textAlign:"left"}}>
                                     {ProjectData["contributors"]
                                     .slice(0,5)
-                                    .map((data)=>{
+                                    .map((data,index)=>{
                                         return(
-                                            <span>
+                                            <span key={index}>
                                                 <img className={styles.contributor_image} src={data.image} />
                                             </span>
                                         )
@@ -78,9 +91,9 @@ export default function Project(){
                                     ProjectData.comments.length<=2
                                     ?
                                     <div className={styles.all_comments}>
-                                        {ProjectData.comments.map(data=>{
+                                        {ProjectData.comments.map((data,index)=>{
                                             return(
-                                                <div>
+                                                <div key={index}>
                                                     <img src={data.image} className={styles.comment_image}/>
                                                     <span className={styles.comment_name}>{data.name}</span>
                                                     <span className={styles.comment_timestamp}>48 minutes ago</span>
@@ -97,9 +110,9 @@ export default function Project(){
                                         <div className={styles.all_comments}>
                                             {ProjectData.comments
                                             .slice(0,2)
-                                            .map((data)=>{
+                                            .map((data,index)=>{
                                                 return(
-                                                    <div>
+                                                    <div key={index}>
                                                         <img src={data.image} className={styles.comment_image}/>
                                                         <span className={styles.comment_name}>{data.name}</span>
                                                         <span className={styles.comment_timestamp}>48 minutes ago</span>
@@ -116,9 +129,9 @@ export default function Project(){
                                         :
                                         <div className={styles.all_comments}>
                                             {ProjectData.comments
-                                            .map((data)=>{
+                                            .map((data,index)=>{
                                                 return(
-                                                    <div>
+                                                    <div key={index}>
                                                         <img src={data.image} className={styles.comment_image}/>
                                                         <span className={styles.comment_name}>{data.name}</span>
                                                         <span className={styles.comment_timestamp}>48 minutes ago</span>
@@ -141,17 +154,17 @@ export default function Project(){
                             <div className={"col-lg-5 col-md-5 col-sm-12 "+styles.lang_and_tags}>
                                 <h2 className={styles.languages_heading}>Languages</h2>
                                 {
-                                    ProjectData.languages.map(data=>{
+                                    ProjectData.languages.map((data,index)=>{
                                         return(
-                                            <p className={styles.language_name}>{data}</p>
+                                            <p key={index} className={styles.language_name}>{data}</p>
                                         );
                                     })
                                 }
                                 <h2 className={styles.languages_heading}>Tags</h2>
                                 {
-                                    ProjectData.tags.map(data=>{
+                                    ProjectData.tags.map((data,index)=>{
                                         return(
-                                            <button className={styles.tag_name}>{data}</button>
+                                            <button key={index} className={styles.tag_name}>{data}</button>
                                         );
                                     })
                                 }
@@ -163,9 +176,9 @@ export default function Project(){
                 open={dialogOpen}
                 onBackdropClick={()=>{setDialogOpen(false)}}>
                     <h2 style={{margin:"10px"}}>LIST OF CONTRIBUTORS</h2>
-                    {ProjectData.contributors.map(data=>{
+                    {ProjectData.contributors.map((data,index)=>{
                         return(
-                            <div>
+                            <div key={index}>
                             <img src={data.image} className={styles.dialog_contributor_image}/>
                             <span>{data.name}</span>
                             </div>
