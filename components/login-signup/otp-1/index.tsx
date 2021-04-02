@@ -20,9 +20,9 @@ function Otp1(props) {
           </Form.Group>
 
           <p className={styles.fontsmall + ' col-12'}>
-            An <a className={styles.fontgreen}>OTP</a> has been sent to your email address{' '}
-            <a className={styles.fontgreen}> example@mail.com </a>
-            Enter <a className={styles.fontgreen}>OTP </a>
+            An <a className={styles.fontbrown}>OTP</a> has been sent to your email address{' '}
+            <a className={styles.fontbrown}> example@mail.com </a>
+            Enter <a className={styles.fontbrown}>OTP </a>
             above to verify your email and complete signup{' '}
             <br/><br/><br/><br/><br/>
           </p>
@@ -46,7 +46,7 @@ function Otp1(props) {
         </Form>
         <p className={styles.fontsmall + ' text-center mt-2'}>
           Already Registered to <span className="font-weight-bold">COMET</span>?{' '}
-          <a className={styles.fontgreen} onClick={() => handleChange(0)}>
+          <a className={styles.fontbrown} onClick={() => handleChange(0)}>
             Login
           </a>
         </p>
