@@ -11,8 +11,8 @@ function ProfileVerifyBox(props) {
       <div className={styles.rightBox + ' container'}>
         <div className="row">
           <div className="col-12">
-            <p className={styles.purple + ' col-12'}>Social Accounts Integration</p>
-            <p>Link all the Social Accounts to Join</p>
+            <p className={styles.purple + ' col-12'}><h5>Social Accounts Integration</h5></p>
+            <p className={styles.tagline + ' col-12'}>Link all the Social Accounts to Join</p>
             <Button className={styles.google + ' mb-2'} variant="light" block>
               <img src="./img/discord-brands.svg" className={styles.logo} alt="Logo" />{' '}
               <span className={styles.fontgreen+' text-monospace'}> D i s c o r d</span>
@@ -38,7 +38,7 @@ function ProfileVerifyBox(props) {
             <Button
               variant="primary"
               type="submit"
-              className={styles.button + ' mt-2 col-12'}
+              className={styles.button + ' mt-2 col-8'}
               onClick={() => handleChange(0)}
             >
               <span className="font-weight-bold">Finish Sign Up</span>
