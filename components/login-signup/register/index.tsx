@@ -18,12 +18,16 @@ function RegisterBox(props) {
 
         <Form action="/" className="row">
           <Form.Group controlId="formBasicEmail" className="mt-2 col-12">
-            <Form.Label>Email </Form.Label>
+            <div className={styles.brownColor}>
+              <Form.Label>Email </Form.Label>
+            </div>
             <Form.Control type="email" placeholder="example@mail.com" className={styles.inputbox} />
           </Form.Group>
 
           <Form.Group controlId="formBasicPassword" className="col-12">
-            <Form.Label>Password</Form.Label>
+            <div className={styles.brownColor}>
+              <Form.Label>Password</Form.Label>
+            </div>
             <Form.Control
               type="password"
               placeholder="* * * * * * * * *"
@@ -32,17 +36,21 @@ function RegisterBox(props) {
           </Form.Group>
 
           <Form.Group controlId="firstname" className=" col-12 col-md-6">
-            <Form.Label>First Name </Form.Label>
+            <div className={styles.brownColor}>
+              <Form.Label>First Name </Form.Label>
+            </div>
             <Form.Control type="text" placeholder="First Name" className={styles.inputbox} />
           </Form.Group>
 
           <Form.Group controlId="lastname" className="col-12 col-md-6">
-            <Form.Label>Last Name</Form.Label>
+            <div className={styles.brownColor}>
+              <Form.Label>Last Name</Form.Label>
+            </div>
             <Form.Control type="text" placeholder="Last Name" className={styles.inputbox} />
           </Form.Group>
           <p className={styles.fontsmall + ' col-12'}>
-            By signing up you agree to our <a className={styles.fontgreen}>Terms and Condition</a>{' '}
-            and <a className={styles.fontgreen}>Policy</a>
+            By signing up you agree to our <a className={styles.fontbrown}>Terms and Condition</a>{' '}
+            and <a className={styles.fontbrown}>Policy</a>
           </p>
 
           <Button
@@ -56,7 +64,7 @@ function RegisterBox(props) {
         </Form>
         <p className={styles.fontsmall + ' text-center mt-2'}>
           Already Registered to <span className="font-weight-bold">COMET</span>?{' '}
-          <a className={styles.fontgreen} onClick={() => handleChange(0)}>
+          <a className={styles.fontbrown} onClick={() => handleChange(0)}>
             Login
           </a>
         </p>

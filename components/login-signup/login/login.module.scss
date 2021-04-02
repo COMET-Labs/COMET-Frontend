@@ -1,11 +1,25 @@
 .button {
   height: 48px;
   width: 100%;
-  background: #29ab87;
-  border-color: #29ab87;
+  background: #550202;
+  border-color: #550202;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 12px;
   font-size: large;
+}
+
+.button:hover{
+  background-color: #741c1c;
+}
+
+.google_logo{
+  color: #550202;
+  font-weight: 500;
+}
+
+.google_logo:hover{
+  color: #550202;
+  font-weight: 500;
 }
 
 .check {
@@ -15,11 +29,27 @@
   color: #858585;
 }
 
+#checkBox {
+  cursor: pointer;
+}
+
 .forget {
   font-size: small;
   width: auto;
-  color: #29ab87;
+  color: #550202;
   display: inline-flex;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.brownColor {
+  color: #550202;
+  font-weight: 500;
+}
+
+.forget:hover{
+  text-decoration: none;
+  color: #741c1c;
 }
 
 .fontsmall {
@@ -27,11 +57,16 @@
   color: #858585;
 }
 
+.mt-4{
+  color: #550202;
+}
+
 .google_logo {
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 12px;
 }
+
 .linkedin_logo {
   height: 22px;
   width: 22px;
@@ -50,13 +85,20 @@
 }
 
 .inputbox:hover {
-  border: 1.5px solid #29ab87;
+  border: 1.5px solid #550202;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
 }
 
 .register {
-  color: #29ab87;
+  color: #550202;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.register:hover{
+  text-decoration: none;
+  color: #741c1c;
 }
 
 .rightBox {
@@ -68,12 +110,14 @@
   border-radius: 16px;
   padding: 20px;
 }
+
 @media (max-width: 1199px) and(min-width:768px) {
   .rightBox {
     width: 90%;
     margin: 5% 0% 5% 10%;
   }
 }
+
 @media (max-width: 440px) {
   .rightBox {
     width: 90%;
