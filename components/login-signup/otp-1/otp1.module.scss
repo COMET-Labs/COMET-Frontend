@@ -4,10 +4,14 @@
 .button {
   height: 48px;
   width: 100%;
-  background: #29ab87;
-  border-color: #29ab87;
+  background: #550202;
+  border-color: #550202;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 12px;
+}
+
+.button:hover{
+  background: #741c1c;
 }
 
 .inputbox {
@@ -15,7 +19,7 @@
   border-radius: 12px;
 }
 .inputbox:hover {
-  border: 1.5px solid #29ab87;
+  border: 1.5px solid #550202;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 12px;
@@ -26,12 +30,34 @@
   color: #858585;
 }
 .fontgreen {
-  color: #29ab87;
+  color: #550202;
+  cursor: pointer;
+  font-weight: bold;
 }
+
+.browncolor{
+  color: #550202;
+  font-weight: 500;
+}
+
+.fontgreen:hover{
+  text-decoration: none;
+  color: #741c1c;
+}
+
 .purple {
-  color: #767bfe;
+  color: #550202;
   font-weight: 400;
+  cursor: pointer;
+  font-weight: bold;
 }
+
+.purple:hover{
+  text-decoration: none;
+  font-weight: bold;
+  color: #741c1c;
+}
+
 .rightBox {
   width: 80%;
   height: auto;

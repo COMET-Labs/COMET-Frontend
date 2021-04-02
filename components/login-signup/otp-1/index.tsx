@@ -10,10 +10,12 @@ function Otp1(props) {
       <div className={styles.rightBox + ' container'}>
         <Form action="/" className="row">
           <a className={styles.purple + ' col-12'} onClick={() => handleChange(1)}>
-           <span className={styles.arrow}>&#8249;</span> Sign Up
+            <span className={styles.arrow}>&#8249;</span> Sign Up
           </a>
           <Form.Group controlId="otp" className="mt-2 col-12">
+            <div className={styles.browncolor}>
             <Form.Label>Enter OTP</Form.Label>
+            </div>
             <Form.Control type="number" placeholder=" - - - -" className={styles.inputbox} />
           </Form.Group>
 
@@ -22,6 +24,7 @@ function Otp1(props) {
             <a className={styles.fontgreen}> example@mail.com </a>
             Enter <a className={styles.fontgreen}>OTP </a>
             above to verify your email and complete signup{' '}
+            <br/><br/><br/><br/><br/>
           </p>
 
           <Button
@@ -30,7 +33,15 @@ function Otp1(props) {
             className={styles.button + ' mt-2 col-12'}
             onClick={() => handleChange(3)}
           >
-            <span className="font-weight-bold">Continue to Verify Profile</span>
+            <span className="font-weight-bold">Complete COMET Profile</span>
+          </Button>
+          <Button
+            variant="primary"
+            type="submit"
+            className={styles.button + ' mt-2 col-12'}
+            onClick={() => handleChange(3)}
+          >
+            <span className="font-weight-bold">Complete Guest Profile</span>
           </Button>
         </Form>
         <p className={styles.fontsmall + ' text-center mt-2'}>
