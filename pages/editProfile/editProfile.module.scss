@@ -1,6 +1,5 @@
 .edit_profile_page {
-    background: url(backgroundimg2.jpeg);
-    background-color: rgb(217, 194, 174);
+    background-color: #f7f6f6;
     padding: 10px;
 }
 
@@ -14,7 +13,7 @@
 .main_heading {
     font-size: 1.5rem;
     font-weight: 700;
-    color: rgb(7, 7, 7);
+    color: rgb(59, 59, 59);
 }
 
 .main_content {
@@ -22,20 +21,15 @@
 }
 
 .step_selected {
-    background: url(bgimg.jpeg);
-    background-color: rgb(217, 194, 174);
-    color: #070707;
-    border-left: 8px solid #000000;
+    background-color: white;
+    color: #767bfe;
+    border-left: 8px solid #767bfe;
     height: 40px;
     cursor: pointer;
 }
 
 .step_not_selected {
-    color: #16110f;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
+    color: gray;
     cursor: pointer;
 }
 
@@ -47,8 +41,7 @@
 }
 
 .step_content {
-    background: url(bgimg.jpeg);
-    background-color: rgb(242, 223, 192);
+    background-color: white;
     padding: 15px;
     border-radius: 0px 10px 10px 10px;
 }
@@ -56,7 +49,7 @@
 .step_content_heading {
     font-size: 1.2rem;
     font-weight: 700;
-    color: rgb(0, 0, 0);
+    color: rgb(59, 59, 59);
 }
 
 .BasicInfo_img {
@@ -67,12 +60,12 @@
 
 .BasicInfo_cameraIcon {
     position: absolute;
-    color: #000000;
+    color: #1bc47d;
     left: 150px;
     bottom: 10px;
     background-color: white;
     margin-top: -15px;
-    box-shadow: 1px 1px 10px rgb(3, 3, 3);
+    box-shadow: 1px 1px 10px rgb(206, 206, 206);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -92,13 +85,13 @@
 
 .enter_details_heading {
     font-size: 0.8rem;
-    color: rgb(0, 0, 0);
+    color: gray;
     font-weight: 500;
 }
 
 .step_content_section_button {
     border-radius: 10px;
-    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    box-shadow: 1px 1px 10px rgb(206, 206, 206);
     float: right;
     width: 40px;
     height: 40px;
@@ -112,16 +105,16 @@
     margin-top: 5px;
     width: 30px;
     height: 30px;
-    color: #000000;
+    color: #1bc47d;
     font-size: 1rem;
     font-weight: 700;
     border-radius: 50%;
-    border: 3px solid #000000;
+    border: 3px solid #1bc47d;
 }
 
 .step_content_main {
     padding: 10px;
-    border-left: 1px solid rgb(10, 10, 10);
+    border-left: 1px solid rgb(185, 184, 184);
 }
 
 .image_grid {
@@ -137,11 +130,11 @@
 
 .camera_icon {
     position: absolute;
-    color: #000000;
+    color: #1bc47d;
     right: -10px;
     background-color: white;
     margin-top: -15px;
-    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    box-shadow: 1px 1px 10px rgb(206, 206, 206);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -156,7 +149,7 @@
 }
 
 .name_label {
-    color: rgb(0, 0, 0);
+    color: gray;
     font-size: 1.3rem;
     font-weight: 600;
     margin-top: 10px;
@@ -166,7 +159,7 @@
 .BasicInfo_nameInput {
     border-radius: 10px;
     outline: none;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid gray;
     height: 50px;
     padding-left: 15px;
     width: 100%;
@@ -179,7 +172,7 @@
 .name_input {
     border-radius: 10px;
     outline: none;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid gray;
     height: 50px;
     padding-left: 15px;
     width: 90%;
@@ -187,7 +180,7 @@
 }
 
 .date_label {
-    color: rgb(0, 0, 0);
+    color: gray;
     font-size: 1.3rem;
     font-weight: 600;
     margin-top: 30px;
@@ -196,7 +189,7 @@
 .description_input {
     border-radius: 10px;
     outline: none;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid gray;
     margin-top: 10px;
     width: 100%;
     max-width: 100%;
@@ -204,7 +197,7 @@
 }
 
 .word_length {
-    color: rgb(0, 0, 0);
+    color: rgb(150, 149, 149);
     text-align: right;
     margin-top: -35px;
     position: absolute;
@@ -217,13 +210,13 @@
 }
 
 .presently_working_icon {
-    color: #000000;
+    color: #1bc47d;
     margin-left: 20px;
 }
 
 .previous_button {
-    color: gray;
-    border: 1.75px solid gray;
+    color: #1bc47d;
+    border: 1.75px solid #1bc47d;
     border-radius: 20px;
     text-align: center;
     height: 50px;
@@ -236,7 +229,7 @@
 }
 
 .add_newProfile_button_text {
-    background-color: #0c0c0c;
+    background-color: #29AB87;
     color: white;
     border-radius: 6px;
     text-align: center;
@@ -252,7 +245,7 @@
 }
 
 .save_and_next_button {
-    background-color: #000000;
+    background-color: #1bc47d;
     color: white;
     border-radius: 20px;
     text-align: center;
@@ -262,14 +255,14 @@
     font-size: 1.1rem;
     max-width: 250px;
     margin-left: 5px;
-    box-shadow: 3px 5px 12px rgb(3, 3, 3);
     cursor: pointer;
+    box-shadow: 3px 5px 12px rgb(3, 3, 3);
 }
 
 .socilaMedia_LinkInput {
     border-radius: 10px;
     outline: none;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid gray;
     height: 50px;
     padding-left: 15px;
     width: 80%;
@@ -281,7 +274,7 @@
 .link_input {
     border-radius: 10px;
     outline: none;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid gray;
     height: 50px;
     padding-left: 15px;
     width: 90%;
@@ -295,7 +288,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 15px;
-    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    box-shadow: 1px 1px 10px rgb(206, 206, 206);
 }
 
 .skill_container {
@@ -303,14 +296,14 @@
     padding-left: 25px;
     padding-top: 20px;
     border-radius: 15px;
-    box-shadow: 1px 1px 10px rgb(5, 5, 5);
+    box-shadow: 1px 1px 10px rgb(206, 206, 206);
 }
 
 .add_skills_button {
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    box-shadow: 1px 1px 10px rgb(12, 12, 12);
+    box-shadow: 1px 1px 10px rgb(206, 206, 206);
     width: 50px;
     height: 50px;
     text-align: center;
@@ -323,16 +316,16 @@
     margin-top: 12px;
     width: 25px;
     height: 25px;
-    color: #050505;
+    color: #1bc47d;
     font-size: 0.8rem;
     font-weight: bold;
     border-radius: 50%;
-    border: 3px solid #070707;
+    border: 3px solid #1bc47d;
 }
 
 .skill_input {
     max-width: 100%;
-    border: 1px solid #070707;
+    border: 1px solid #1bc47d;
     border-radius: 12.5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -343,17 +336,17 @@
 
 .skill_input:focus {
     outline: none;
-    border: 2px solid #070707;
+    border: 2px solid #1bc47d;
 }
 
 .skill_name {
     font-size: 1.5rem;
-    color: rgb(29, 29, 29);
+    color: rgb(85, 85, 85);
     margin-bottom: -5px;
 }
 
 .terms_and_conditions {
-    color: rgb(8, 8, 8);
+    color: blue;
     cursor: pointer;
     text-decoration: underline;
 }
@@ -381,11 +374,11 @@
     padding-top: 5px;
     text-align: right;
     padding-right: 30px;
-    color: #793232;
+    color: #767bfe;
     cursor: pointer;
 }
 
 .join_icon {
-    color: #A52A2A;
+    color: #1bc47d;
     margin-left: 20px;
 }
