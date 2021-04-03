@@ -12,27 +12,29 @@ function ProfileVerifyBox(props) {
         <div className="row">
           <div className="col-12">
             <p className={styles.purple + ' col-12'}>Social Accounts Integration</p>
+            <div className={styles.browncolor}>
             <p>Link all the Social Accounts to Join</p>
+            </div>
             <Button className={styles.google + ' mb-2'} variant="light" block>
               <img src="./img/discord-brands.svg" className={styles.logo} alt="Logo" />{' '}
-              <span className={styles.fontgreen+' text-monospace'}> D i s c o r d</span>
+              <span className={styles.fontbrown+' text-monospace'}> D i s c o r d</span>
             </Button>
             <Button className={styles.google + ' mb-2'} variant="light" block>
               <img src="./img/linkedin.svg" className={styles.logo} alt="Logo" />{' '}
-              <span className={styles.fontgreen+ ' text-monospace'}> L i n k e d I n</span>
+              <span className={styles.fontbrown+ ' text-monospace'}> L i n k e d I n</span>
             </Button>
             <Button className={styles.google + ' mb-2'} variant="light" block>
               <img src="./img/facebook-brands.svg" className={styles.logo} alt="Logo" />{' '}
-              <span className={styles.fontgreen+ ' text-monospace'}> F a c e b o o k</span>
+              <span className={styles.fontbrown+ ' text-monospace'}> F a c e b o o k</span>
             </Button>
             <Button className={styles.google + ' mb-2'} variant="light" block>
               <img src="./img/instagram-brands.svg" className={styles.logo} alt="Logo" />{' '}
-              <span className={styles.fontgreen+ ' text-monospace'}> I n s t a g r a m</span>
+              <span className={styles.fontbrown+ ' text-monospace'}> I n s t a g r a m</span>
             </Button>
             <p className={styles.fontsmall + ' col-12'}>
-              By continuing, you agree to our <a className={styles.fontgreen}>Terms</a> and to
+              By continuing, you agree to our <a className={styles.fontbrown}>Terms</a> and to
               receive COMET emails and updates and acknowledge that you read our{' '}
-              <a className={styles.fontgreen}>Privacy Policy</a>.
+              <a className={styles.fontbrown}>Privacy Policy</a>.
             </p>
 
             <Button
@@ -46,7 +48,7 @@ function ProfileVerifyBox(props) {
 
             <p className={styles.fontsmall + ' text-center mt-2'}>
               Already registered to <span className="font-weight-bold">COMET</span>?{' '}
-              <a className={styles.fontgreen} onClick={() => handleChange(0)}>
+              <a className={styles.fontbrown} onClick={() => handleChange(0)}>
                 Login
               </a>
             </p>

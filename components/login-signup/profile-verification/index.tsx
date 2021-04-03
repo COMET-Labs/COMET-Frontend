@@ -12,25 +12,33 @@ function ProfileVerifyBox(props) {
         <Form action="/" className="row">
           <p className={styles.purple + ' col-12'}>Profile verification</p>
           <Form.Group controlId="formBasicEmail" className="mt-2 col-12">
+          <div className={styles.browncolor}>
             <Form.Label>Institute Name</Form.Label>
+            </div>
             <Form.Control type="email" placeholder="Institute Name" className={styles.inputbox} />
             <p className={styles.fontsmall + ' mt-1'}>Enter Name of the Institute you study in.</p>
-          </Form.Group>
+          </Form.Group> 
           <Form.Group controlId="formBasicEmail" className=" col-12 col-md-6">
+          <div className={styles.browncolor}>
             <Form.Label>Joining Year </Form.Label>
+            </div>
             <Form.Control type="email" placeholder="Joining Year" className={styles.inputbox} />
           </Form.Group>
 
           <Form.Group controlId="formBasicEmail" className="col-12 col-md-6">
+          <div className={styles.browncolor}>
             <Form.Label>Branch</Form.Label>
+            </div>
             <Form.Control type="email" placeholder="Branch" className={styles.inputbox} />
           </Form.Group>
           <Form.Group controlId="formBasicPassword" className="col-12">
+          <div className={styles.browncolor}>
             <Form.Label>Full Name as Registered in your institute</Form.Label>
+            </div>
             <Form.Control type="password" placeholder="Full Name" className={styles.inputbox} />
           </Form.Group>
           <p className={styles.fontsmall + ' col-12'}>
-            Having trouble to find you? <a className={styles.fontgreen}>Contact us</a>{' '}
+            Having trouble to find you? <a className={styles.fontbrown}>Contact us</a>{' '}
           </p>
 
           <Button
@@ -44,7 +52,7 @@ function ProfileVerifyBox(props) {
         </Form>
         <p className={styles.fontsmall + ' text-center mt-2'}>
           Already Registered to <span className="font-weight-bold">COMET</span>?{' '}
-          <a className={styles.fontgreen} onClick={() => handleChange(0)}>
+          <a className={styles.fontbrown} onClick={() => handleChange(0)}>
             Login
           </a>
         </p>

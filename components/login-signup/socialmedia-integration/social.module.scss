@@ -1,11 +1,15 @@
 .button {
   height: 48px;
   width: 100%;
-  background: #29ab87;
-  border-color: #29ab87;
+  background: #550202;
+  border-color: #550202;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 12px;
   font-size: large;
+}
+
+.button:hover{
+  background: #741c1c;
 }
 
 .inputbox {
@@ -13,9 +17,14 @@
   border-radius: 10px;
 }
 .inputbox:hover {
-  border: 1.5px solid #29ab87;
+  border: 1.5px solid #550202;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+}
+
+.browncolor{
+  color: #550202;
+  font-weight: 500;
 }
 
 .check {
@@ -29,17 +38,30 @@
   font-size: small;
   color: #858585;
 }
-.fontgreen {
-  color: #29ab87;
+.fontbrown {
+  color: #550202;
+  font-weight: bold;
+  cursor: pointer;
 }
+
+.fontbrown:hover{
+  color: #741c1c;
+  text-decoration: none;
+}
+
 .logo {
   height: 20px;
   width: 20px;
   margin-right: 20px;
 }
 .purple {
-  color: #767bfe;
-  font-weight: 400;
+  color: #550202;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.purple:hover{
+  color: #741c1c;
 }
 .rightBox {
   width: 80%;

@@ -5,7 +5,7 @@ function Otp2(props) {
   console.log(props.form);
   function handleChange(value) {
     props.onChange(value);
-  }
+  } 
   if (props.form == 4) {
     return (
       <div className={styles.rightBox + ' container'}>
@@ -15,12 +15,14 @@ function Otp2(props) {
             <span className={styles.arrow}>&#8249;</span> Profile verification
           </a>
           <Form.Group controlId="formBasicEmail" className="mt-2 col-12">
+          <div className={styles.browncolor}>
             <Form.Label>Enter OTP</Form.Label>
+            </div>
             <Form.Control type="email" placeholder=" - - - -" className={styles.inputbox} />
           </Form.Group>
 
           <p className={styles.fontsmall + ' col-12'}>
-            An <a className={styles.fontgreen}>OTP</a> has been sent to your institute registered
+            An <a className={styles.fontbrown}>OTP</a> has been sent to your institute registered
             email address. Enter <a className={styles.fontgreen}>OTP</a> above to verify your
             Information.{' '}
           </p>
@@ -36,7 +38,7 @@ function Otp2(props) {
         </Form>
         <p className={styles.fontsmall + ' text-center mt-2'}>
           Already Registered to <span className="font-weight-bold">COMET</span>?{' '}
-          <a className={styles.fontgreen} onClick={() => handleChange(0)}>
+          <a className={styles.fontbrown} onClick={() => handleChange(0)}>
             Login
           </a>
         </p>
