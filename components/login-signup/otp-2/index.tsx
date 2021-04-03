@@ -12,10 +12,10 @@ function Otp2(props) {
         <Form action="/" className="row">
           <a className={styles.purple + ' col-12'} onClick={() => handleChange(3)}>
             {' '}
-            <span className={styles.arrow}>&#8249;</span> Profile verification
+            <span className={styles.arrow}>&#8249;</span> Profile Verification
           </a>
           <Form.Group controlId="formBasicEmail" className="mt-2 col-12">
-            <Form.Label>Enter OTP</Form.Label>
+            <Form.Label><h4>Enter OTP</h4></Form.Label>
             <Form.Control type="email" placeholder=" - - - -" className={styles.inputbox} />
           </Form.Group>
 
@@ -28,7 +28,7 @@ function Otp2(props) {
           <Button
             variant="primary"
             type="submit"
-            className={styles.button + ' mt-2 col-12'}
+            className={styles.button + ' mt-2 col-8'}
             onClick={() => handleChange(5)}
           >
           <span className="font-weight-bold">Verify & Continue</span>
