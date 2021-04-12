@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.navbar {
+  height: 48px;
+  margin-top: 0.47%;
+}
+
+.links {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  align-self: center;
+  color: #ebebeb !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+.fname {
+  height: 24px;
+  margin-top: 13px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+  color: #767bfe;
+}
+
+.lname {
+  height: 24px;
+  margin-top: 13px;
+  font-family: Poppins;
+  font-weight: bolder;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+  color: #ebebeb;
+}
+
+.name {
+  flex-wrap: nowrap !important;
+}
+
+.institute {
+  /* IIITDM Jabalpur */
+  width: 92px;
+  height: 15px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  /* identical to box height */
+  color: #e4e4e4;
+  float: right;
+}
+.profile {
+  padding-right: 100px;
+}
+.pic {
+  margin-top: 10px;
+  height: 41px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+@media (max-width: 992px) {
+  .links {
+    width: 100%;
+  }
+  .profile {
+    padding-left: 20px;
+    padding-right: 0px;
+  }
+
+  .first {
+    order: 2;
+  }
+  .second {
+    order: 1;
+  }
+}

@@ -1,0 +1,36 @@
+.login_page {
+  background: #f7ffff;
+  background-image: url('background.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 40px;
+}
+.left {
+  background-image: url('comet-heading.svg'), url('left-image.svg');
+  background-size: 50%, 60%;
+  background-position: top 2vh left 100px, center top 13vw;
+  background-repeat: no-repeat, no-repeat;
+  height: auto;
+  min-height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+}
+@media (max-width: 991px) and(min-width:768px) {
+  .left {
+    background-size: 80%, 90%;
+    background-position: top 40px left 10px, center bottom 10vw;
+  }
+}
+@media (max-width: 767px) {
+  .left {
+    background-image: url('comet-heading.svg');
+    background-size: 70%;
+    background-position: top 3vw center;
+    background-repeat: no-repeat;
+    min-height: 30vw;
+  }
+}

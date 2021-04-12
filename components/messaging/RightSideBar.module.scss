@@ -1,0 +1,24 @@
+.header {
+    flex: 10%;
+  }
+  
+  /* chat section header styles */
+  .header__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+  }
+  
+  .header__left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__title {
+    color: #707070;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
