@@ -4,9 +4,10 @@ import Layout from '../../components/layouts/default';
 import LoginBox from '../../components/login-signup/login';
 import RegisterBox from '../../components/login-signup/register';
 import ProfileverifyBox from '../../components/login-signup/profile-verification';
-import Otp2 from '../../components/login-signup/otp-2';
+import UploadDocumentation from '../../components/login-signup/upload-documentation';
 import Otp1 from '../../components/login-signup/otp-1';
 import Social from '../../components/login-signup/socialmedia-integration';
+import ForgotPassword from '../../components/login-signup/forgot-password';
 
 export default function Login() {
   const [form, setForm] = useState(0);
@@ -27,8 +28,9 @@ export default function Login() {
               {form == 3 && (
                 <ProfileverifyBox form={form} onChange={handleChange}></ProfileverifyBox>
               )}
-              {form == 4 && <Otp2 form={form} onChange={handleChange}></Otp2>}
+              {form == 4 && <UploadDocumentation form={form} onChange={handleChange}></UploadDocumentation>}
               {form == 5 && <Social form={form} onChange={handleChange}></Social>}
+              {form == 6 && <ForgotPassword form={form} onChange={handleChange}></ForgotPassword>}
             </div>
           </div>
         </div>

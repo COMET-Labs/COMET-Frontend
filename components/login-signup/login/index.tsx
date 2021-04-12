@@ -28,7 +28,10 @@ function LoginBox(props) {
           <Form.Group controlId="formBasicCheckbox" className={styles.check}>
             <Form.Check type="checkbox" label="Remember me" />
           </Form.Group>
-          <a className={styles.forget + ' float-right'}>Forgot Password?</a>
+          <a className={styles.forget + ' float-right'}
+          onClick={()=>{
+            props.onChange(props.form + 6);
+          }}>Forgot Password?</a>
           <Button variant="primary" type="submit" className={styles.button + ' mt-3'}>
            <span className="font-weight-bold">Login</span>
           </Button>
