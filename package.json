@@ -18,7 +18,7 @@
     "font-awesome": "^4.7.0",
     "lerp": "^1.0.3",
     "netlify-cli": "^3.4.2",
-    "next": "^10.0.9",
+    "next": "^13.3.1",
     "next-transpile-modules": "^6.0.0",
     "react-bootstrap": "^1.4.0",
     "react-dom": "17.0.1",
